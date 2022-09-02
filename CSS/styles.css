@@ -79,6 +79,7 @@ a {
     padding: 2rem 1rem 2rem 1rem;
     margin: 0;
     text-align: center;
+    font-size: 1.1rem;
 }
 
 #about_me a {
@@ -91,6 +92,10 @@ a {
     padding: 2rem 1rem 2rem 1rem;
     margin: 0;
     text-align: center;
+}
+
+#portfolio_heading p {
+    font-size: 1.1rem;
 }
 
 .portfolio_list {
@@ -146,6 +151,7 @@ figcaption {
 }
 
 .project_links {
+    padding: 5px;
     width: 100%;
 }
 
@@ -154,9 +160,12 @@ figcaption {
     grid-template-columns: 1.5fr 2fr 0.25fr;
     gap: 0.5rem;
     list-style: none;
+    padding: 5px;
 }
 
 .project_links i {
+    position: relative;
+    top: 3px;
     color: #f28f38;
     font-size: 1.5rem;
 }
@@ -172,6 +181,7 @@ figcaption {
 }
 
 .project_links a:hover {
+    padding: 5px;
     background-color: #4e74bf;
     border-radius: 0.25rem;
 }
