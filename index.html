@@ -48,16 +48,41 @@
     <section class="portfolio_list">
         <div class="project_container">
             <figure class="project_figure">
+                <img src="images/tubular.png" alt="Tubular Project Image">
+                <figcaption>Tubular</figcaption>
+            </figure>
+            <p> A full-stack route planning app for the London Underground. Built with supplied mock data using the MERN stack
+                with the back end deployed on heroku and the front end on netlify. On choosing a start and end station, the app
+                finds and displays direct routes first, then those requiring changes, in descending order of 
+                speed. This has probably been my favourite app to work on and has been great practice at full-stack javascript
+                development.
+            </p>
+            <section class="project_links">
+                <ul>
+                    <li class="github_link"><a href="https://github.com/AndrewScott85/london-underground-fe-continuation"
+                        target="_blank"><i class="fa-brands fa-github-square"></i> Front-End Github</a></li>
+                    <li class="site_link"><a href="https://tubular-fe.netlify.app/"
+                                             target="_blank"><i
+                            class="fa-solid fa-globe"></i> Site Link</a></li>
+                    <li class="github_link"><a href="https://github.com/AndrewScott85/london-underground-be-continuation"
+                                             target="_blank"><i
+                        class="fa-brands fa-github-square"></i> Back-End Github</a></li>
+                </ul>
+            </section>
+        </div>
+
+        <div class="project_container">
+            <figure class="project_figure">
                 <img src="images/carpe_diem.png" alt="Car Collection Application Project Image">
                 <figcaption>CarPe-Diem</figcaption>
             </figure>
-            <p> An OOP application in PHP, styled using SASS, which takes data on a collection of cars from an
-                API in JSON format, uses it to build a database in MySQL, then fetches that data to display a
-                searchable, filterable collection of cars - clicking on any of the cars opens a new page showing car
-                information in more detail. This was a great project for getting into working in an OOP manner, as well
-                as good practice in SQL.
+            <p> An OOP application in PHP, styled using SASS. This application involved populating a MySQL
+                database using data in JSON form from an API, then fetching from that database to display a
+                searchable, filterable collection of cars. Clicking on any of the cars opens a
+                new page showing car information in more detail. This was a great project for getting experience
+                working in OOP, designing App architecture from the front end to the back end, using APIs and
+                working with SQL.
             </p>
-
             <section class="project_links">
                 <ul>
                     <li class="github_link"><a href="https://github.com/iO-Academy/2022-mar-carcollection"
@@ -76,14 +101,13 @@
                 <img src="images/scranmaster.png" alt="ScranMaster Project Image">
                 <figcaption>ScranMaster</figcaption>
             </figure>
-            <p>The front end of a food delivery app, built in React and styled using Bootstrap, to a specification laid
-                out in high fidelity wireframes. Fetching from an API to
-                display a list of available restaurants and a filterable menu for each restaurant. Items can be added
-                an order basket, which calculates the total cost. Submitting an order opens a modal window displaying
-                the
-                ETA and a progress bar. This app provided a good chance to get familiar with working in React and
-                Bootstrap to produce an App to match a given visual design.</p>
-
+            <p>The front end for a food delivery app, built in React and styled using Bootstrap to match supplied
+                high fidelity wireframes. Fetching from an API displays a list of available restaurants and a
+                filterable menu for each restaurant. Items can be added to an order basket, which calculates the
+                total cost. Submitting an order opens a modal window displaying the ETA and a progress bar. This
+                app provided a good chance to get familiar with using React and Bootstrap in a component based
+                design.
+            </p>
             <section class="project_links">
                 <ul>
                     <li class="github_link"><a href="https://github.com/io-Academy/2022-mar-scranmaster"
@@ -101,10 +125,11 @@
                 <img src="images/word_runner.png" alt="WordRunner Project Image">
                 <figcaption>WordRunner</figcaption>
             </figure>
-            <p> A word guessing game built using javascript. Target words and synonyms are fetched from an api, and on
-                starting a new game, a random target word is selected, and its synonyms are displayed to the player,
-                who is given 5 attempts, or a maximum of 30 seconds to guess the target word. This app was really fun to
-                make, and good practice in javascript and css.
+            <p> A word guessing game built using javascript. Target words and synonyms are fetched from an api,
+                and on starting a new game, a random target word is selected, and its synonyms are displayed to
+                the player. The player is then given 5 attempts, or a maximum of 30 seconds, to guess the target
+                word. This app was really fun to make, and provided our first experience of working
+                collaboratively in a Scrum team, as well as good practice with javascript and CSS.
             </p>
 
             <section class="project_links">
@@ -118,6 +143,7 @@
                 </ul>
             </section>
         </div>
+
     </section>
 </div>
 

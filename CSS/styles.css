@@ -116,6 +116,8 @@ a {
     justify-content: space-between;
     padding: 1rem;
     margin-bottom: 2rem;
+    border: 1px solid #ffffff50;
+    border-radius: 0.1rem;
 }
 
 .project_container p {
@@ -138,26 +140,32 @@ a {
     aspect-ratio: 3/2;
     border-radius: 1rem;
     max-width: 400px;
-    border: 0.15rem solid #ffffff;
+    border: 0.1rem solid #ffffff50;
 }
 
 figcaption {
     font-size: 1.5rem;
     color: #ffffff;
-    text-decoration: underline;
+    font-weight: bold;
     padding-top: 1.5rem;
     padding-bottom: 0;
     margin: 0;
 }
 
 .project_links {
-    padding: 5px;
+    padding: 3px;
     width: 100%;
+}
+
+.project_links a{
+    padding: 3px;
+    border: 1px solid transparent;
+    border-radius: 0.25rem;
 }
 
 .project_links ul {
     display: grid;
-    grid-template-columns: 1.5fr 2fr 0.25fr;
+    grid-template-columns: 0.25fr 1 fr 1fr 0.25fr;
     gap: 0.5rem;
     list-style: none;
     padding: 5px;
@@ -166,23 +174,25 @@ figcaption {
 .project_links i {
     position: relative;
     top: 3px;
+    padding-bottom: 3px;
     color: #f28f38;
     font-size: 1.5rem;
 }
 
 .github_link {
-    grid-column: 1;
-    justify-self: end;
+    grid-column: 2;
+    justify-self: start;
+    
 }
 
 .site_link {
-    grid-column: 2;
+    grid-column: 3;
     justify-self: start;
 }
 
-.project_links a:hover {
-    padding: 5px;
-    background-color: #4e74bf;
+.project_links a:hover { 
+    padding: 3px;
+    border: 1px solid #ffffff50;
     border-radius: 0.25rem;
 }
 
@@ -221,7 +231,7 @@ figcaption {
 
     .portfolio_list {
         display: grid;
-        grid-template-columns: repeat(3, 1fr);
+        grid-template-columns: 1fr 1fr;
         justify-content: center;
     }
 
@@ -229,7 +239,7 @@ figcaption {
         display: flex;
         flex-direction: column;
         align-items: center;
-        width: 30vw;
+        width: 40vw;
         padding: 2vw;
     }
 
