@@ -144,11 +144,11 @@ a {
 }
 
 figcaption {
-    font-size: 1.5rem;
+    font-size: 2rem;
     color: #ffffff;
     font-weight: bold;
-    padding-top: 1.5rem;
-    padding-bottom: 0;
+    padding-top: 0.5rem;
+    padding-bottom: 0.5rem;
     margin: 0;
 }
 
@@ -181,8 +181,7 @@ figcaption {
 
 .github_link {
     grid-column: 2;
-    justify-self: start;
-    
+    justify-self: start;   
 }
 
 .site_link {
@@ -222,7 +221,7 @@ figcaption {
 }
 
 
-@media only screen and (min-width: 800px) {
+@media only screen and (min-width: 1050px) {
 
     #main_image figure img {
         width: 50vw;
@@ -230,6 +229,8 @@ figcaption {
     }
 
     .portfolio_list {
+        padding-left: 10vw;
+        padding-right: 10vw;
         display: grid;
         grid-template-columns: 1fr 1fr;
         justify-content: center;
@@ -239,8 +240,30 @@ figcaption {
         display: flex;
         flex-direction: column;
         align-items: center;
-        width: 40vw;
-        padding: 2vw;
+        width: 35vw;
+    }
+
+    #tubular_links ul {
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr;
+        gap: 0.5rem;
+        list-style: none;
+        padding: 5px;
+    }
+    
+    #github_link_fe {
+        grid-column: 1;
+        justify-self: start;  
+    }
+    
+    #github_link_be {
+        grid-column: 2;
+        justify-self: start;    
+    }
+    
+    .site_link {
+        grid-column: 3;
+        justify-self: start;
     }
 
     .about_me p, .portfolio_heading p {
@@ -248,7 +271,7 @@ figcaption {
     }
 }
 
-@media only screen and (max-width: 800px) {
+@media only screen and (max-width: 1050px) {
     .project_container {
         grid-column: 2;
     }
