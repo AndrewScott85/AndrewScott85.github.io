@@ -16,9 +16,12 @@ h2 {
 }
 
 #navbar {
+    display: flex;
+    justify-content: space-between;
     z-index: 1;
     position: sticky;
     top: 0;
+    background-color: #455073;
     border-bottom: solid 2px #4e74bf;
 }
 
@@ -29,8 +32,11 @@ h2 {
     grid-template-rows: 1fr;
     padding: 1rem;
     font-size: 1.5rem;
-    background-color: #455073;
     justify-items: center;
+}
+
+#navbar button {
+    margin-right: 2rem;
 }
 
 a {
@@ -47,13 +53,13 @@ a {
 }
 
 #main_image figure {
-    margin: 2rem 0 0 0;
+    margin: 0rem 0 0 0;
 }
 
 #main_image {
     text-align: center;
     position: sticky;
-    top: 6rem;
+    top: 0rem;
     z-index: -1;
 }
 
@@ -63,7 +69,7 @@ a {
     margin: 2rem;
 }
 
-#main_image_caption {
+h1 {
     font-size: 2rem;
     text-align: center;
     text-decoration: none;
