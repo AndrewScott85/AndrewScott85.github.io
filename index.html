@@ -21,7 +21,7 @@
         </ul>
         <button id="lang-switch">EN-FR</button>
     </nav>
-    <h1>Hi, I'm Andrew and welcome to my <a href="#portfolio">Portfolio!</a></h1>
+    <h1 data-i18n="h1_tag"></h1>
     <div id="main_image">
         <figure>
             <img src="images/main_image.jpg" alt="Man doing web design at a desk">
@@ -29,25 +29,15 @@
     </div>
 
     <div id="about_me">
-        <h2>About Me</h2>
-        <p>I am a friendly and enthusiastic full-stack software developer, passionate about the potential of coding to
-            solve problems.
-            In my spare time, I like reading, travel, cooking, swimming, and learning languages.
-        </p>
-        <p> After earning my degree in mechanical engineering and working for several years in the energy efficiency
-            sector, I took
-            a career break to travel and teach scuba diving before focusing on my interest in tech. I recently completed
-            a 16 week
-            full-stack coding bootcamp at <a href="https://io-academy.uk">iO Academy</a> in Bath, UK and I am now
-            seeking professional
-            opportunities to start my career in software development.
-        </p>
+        <h2 data-i18n="about_title"></h2>
+        <p data-i18n="about_p1"></p>
+        <p data-i18n="about_p2"></p>
     </div>
 
     <div id="portfolio">
         <section id="portfolio_heading">
-            <h2>Portfolio</h2>
-            <p> Below is a selection of projects showcasing some of the technologies I've worked with.</p>
+            <h2 data-i18n="portfolio_title"></h2>
+            <p data-i18n="portfolio_intro"></p>
         </section>
 
         <section class="portfolio_list">
@@ -57,16 +47,11 @@
                             alt="Galère.AI Project Image"></a>
                     <figcaption>Galère.AI</figcaption>
                 </figure>
-                <p> A blog site with content created using generative AI. Site made with Laravel, Inertia, Jetstream,
-                    Vue, & Tailwind CSS.
-                    Guests can view posts, while registered users can login and create/edit/delete posts.
-                    Images were created using Nightcafe and Midjourney, while titles and descriptions were created using
-                    ChatGPT.
-                    Future developments will include ability to like and comment on posts.
+                <p data-i18n="galere_description">
                 </p>
                 <section class="project_links">
                     <ul>
-                        <li class="github_link"><a href="https://github.com/AndrewScott85/laravel-sail/"
+                        <li class="github_link"><a href="https://github.com/AndrewScott85/laravel-sai1/"
                                 target="_blank"><i class="fa-brands fa-github-square"></i> Github</a></li>
                         <li class="site_link"><a href="http://galere.herokuapp.com/" target="_blank"><i
                                     class="fa-solid fa-globe"></i> Live</a></li>
@@ -79,15 +64,7 @@
                             alt="Tubular Project Image"></a>
                     <figcaption>Tubular</figcaption>
                 </figure>
-                <p> A full-stack route planning app for the London Underground. Built with supplied mock data using the
-                    MERN stack
-                    with the back end deployed on heroku and the front end on netlify. On choosing a start and end
-                    station, the app
-                    finds and displays direct routes first, then those requiring changes, in descending order of
-                    speed. This has probably been my favourite app to work on and has been great practice at full-stack
-                    javascript
-                    development.
-                </p>
+                <p data-i18n="tubular_description"></p>
                 <section class="project_links" id="tubular_links">
                     <ul>
                         <li class="github_link" id="github_link_fe"><a
@@ -109,13 +86,7 @@
                             alt="Car Collection Application Project Image"></a>
                     <figcaption>CarPe-Diem</figcaption>
                 </figure>
-                <p> An OOP application in PHP, styled using SASS. This application involved populating a MySQL
-                    database using data in JSON form from an API, then fetching from that database to display a
-                    searchable, filterable collection of cars. Clicking on any of the cars opens a
-                    new page showing car information in more detail. This was a great project for getting experience
-                    working in OOP, designing App architecture from the front end to the back end, using APIs and
-                    working with SQL.
-                </p>
+                <p data-i18n="carpe_diem_description"></p>
                 <section class="project_links">
                     <ul>
                         <li class="github_link"><a href="https://github.com/iO-Academy/2022-mar-carcollection"
@@ -133,13 +104,7 @@
                             src="images/scranmaster.png" alt="ScranMaster Project Image"></a>
                     <figcaption>ScranMaster</figcaption>
                 </figure>
-                <p>The front end for a food delivery app, built in React and styled using Bootstrap to match supplied
-                    high fidelity wireframes. Fetching from an API displays a list of available restaurants and a
-                    filterable menu for each restaurant. Items can be added to an order basket, which calculates the
-                    total cost. Submitting an order opens a modal window displaying the ETA and a progress bar. This
-                    app provided a good chance to get familiar with using React and Bootstrap in a component based
-                    design.
-                </p>
+                <p data-i18n="scranmaster_description"></p>
                 <section class="project_links">
                     <ul>
                         <li class="github_link"><a href="https://github.com/io-Academy/2022-mar-scranmaster"
@@ -156,12 +121,7 @@
                             src="images/word_runner.png" alt="WordRunner Project Image"></a>
                     <figcaption>WordRunner</figcaption>
                 </figure>
-                <p> A word guessing game built using javascript. Target words and synonyms are fetched from an api,
-                    and on starting a new game, a random target word is selected, and its synonyms are displayed to
-                    the player. The player is then given 5 attempts, or a maximum of 30 seconds, to guess the target
-                    word. This app was really fun to make, and provided our first experience of working
-                    collaboratively in a Scrum team, as well as good practice with javascript and CSS.
-                </p>
+                <p data-i18n="wordrunner_description"></p>
 
                 <section class="project_links">
                     <ul>
@@ -180,15 +140,14 @@
     <footer id="contact">
         <h2>Contact</h2>
         <ul>
-            <li><span><i class="fa-solid fa-envelope"></i></span>andrew.scott.dev@gmail.com</li>
+            <li><span><i class="fa-solid fa-envelope"></i></span>andrew.scott.dev@gmai1.com</li>
             <li><span><i class="fa-brands fa-github-square"></i></span><a href="https://github.com/AndrewScott85"
                     target="_blank">github.com/AndrewScott85</a>
             </li>
         </ul>
         <br>
         <br>
-        <p>Vector artwork from <a
-                href="https://www.vecteezy.com/free-vector/mobile-application-development">Vecteezy</a>
+        <p data-i18n="vector_credit"></a>
         </p>
     </footer>
 

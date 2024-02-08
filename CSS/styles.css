@@ -64,9 +64,9 @@ a {
 }
 
 #main_image img {
-    width: 80vw;
+    width: 90vw;
     height: auto;
-    margin: 2rem;
+    margin: 6rem;
 }
 
 h1 {
@@ -83,7 +83,7 @@ h1 {
     color: #ffffff;
     background-color: #455073;
     padding: 2rem 1rem 2rem 1rem;
-    margin: 0;
+    margin-top: 4rem;
     text-align: center;
     font-size: 1.1rem;
 }
