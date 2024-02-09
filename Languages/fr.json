@@ -1,7 +1,7 @@
 {
-    "about": "À propos",
-    "portfolio": "Portfolio",
-    "contact": "Contact",
+    "about": "<a href=\"#about_me\">À propos</a>",
+    "portfolio": "<a href=\"#portfolio\">Portfolio</a>",
+    "contact": "<a href=\"#contact\">Contact</a>",
     "h1_tag": "Bonjour, je suis Andrew et bienvenue sur mon <a href=\"#portfolio\">Portfolio!</a>",
     "about_title": "À propos de moi",
     "about_p1": "Je suis un développeur de logiciels full-stack sympathique et enthousiaste, passionné par le potentiel du code pour résoudre des problèmes. Dans mes temps libres, j'aime lire, voyager, cuisiner, nager et apprendre des langues.",

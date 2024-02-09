@@ -26,10 +26,10 @@ h2 {
 }
 
 #navbar ul {
-    display: grid;
+    display: flex;
     list-style: none;
-    grid-template-columns: 1fr 1fr 1fr;
-    grid-template-rows: 1fr;
+    /* grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: 1fr; */
     padding: 1rem;
     font-size: 1.5rem;
     justify-items: center;
