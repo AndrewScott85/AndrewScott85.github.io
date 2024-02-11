@@ -1,4 +1,5 @@
-const langButton = document.querySelector('#lang-switch');
+const langSwitch = document.querySelector('#lang-switch');
+
 
 
 // Function to update content based on selected language
@@ -44,8 +45,11 @@ async function changeLanguage(lang) {
 }
 
 const handleLangClick = () => {
+  console.log(langSwitch.checked);
   lang = lang === 'en' ? 'fr' : 'en';
   changeLanguage(lang);
+  langSwitch.checked = lang !== 'en';
+  console.log(langSwitch.checked);
 }
 
 
@@ -58,7 +62,7 @@ function createAnchor(href, text) {
 
 
 // Add event listener for translation button
-langButton.addEventListener('click', handleLangClick);
+langSwitch.addEventListener('click', handleLangClick);
 
 // Default to English
 let lang = 'en';
