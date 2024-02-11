@@ -18,6 +18,7 @@ h2 {
     color: #f28f38;
     font-size: 2.5rem;
 }
+
 #navbar {
     background-color: #455073;
     z-index: 1;
@@ -39,9 +40,6 @@ h2 {
     margin-left: 2rem;
 }
 
-#navbar button {
-    margin-right: 2rem;
-}
 
 #navbar li:hover {
     transform: scale(1.1);
@@ -238,6 +236,17 @@ figcaption {
     height: 0;
   }
   
+  .lang-toggle-container {
+    display: flex;
+    align-items: center; 
+}
+
+.lang-text {
+    margin: 0 10px; 
+    color: #ffffff; 
+    font-weight: bold; 
+}
+
   .slider {
     position: absolute;
     cursor: pointer;
@@ -251,13 +260,14 @@ figcaption {
   
   .slider:before {
     position: absolute;
-    content: "EN";
+    content: "";
     height: 26px;
     width: 26px;
     left: 4px;
     bottom: 4px;
-    background-color: white;
+    background-color:#4e74bf;
     transition: .4s;
+    background-image: url('https://flagicons.lipis.dev/flags/4x3/gb.svg');
   }
   
   input:checked + .slider {
@@ -266,7 +276,8 @@ figcaption {
   
   input:checked + .slider:before {
     transform: translateX(26px);
-    content: "FR";
+    content: "";
+    background-image: url('https://flagicons.lipis.dev/flags/4x3/fr.svg');
   }
   
   .slider.round {
