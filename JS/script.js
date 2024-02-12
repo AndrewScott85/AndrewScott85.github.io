@@ -6,25 +6,13 @@ Switch language between English and French
 // Select language switch
 const langSwitch = document.querySelector('#lang-switch');
 
-// Function called when language switch clicked
-const handleLangClick = () => {
-  lang = lang === 'en' ? 'fr' : 'en';
-  changeLanguage(lang);
-  langSwitch.checked = lang !== 'en';
+// Function to create anchor to be added to the text where necessary
+const createAnchor = (href, text) => {
+  const anchor = document.createElement('a');
+  anchor.href = href;
+  anchor.textContent = text;
+  return anchor;
 }
-
-// Change language
-async function changeLanguage(lang) {
-  const langData = await fetchLanguageData(lang);
-    updateContent(langData);
-}
-
-// Fetch language data
-const fetchLanguageData = async(lang) => {
-  const response = await fetch(`Languages/${lang}.json`);
-  return response.json();
-}
-
 
 // Update content based on selected language
 const updateContent = (langData) => {
@@ -54,24 +42,33 @@ const updateContent = (langData) => {
   });
 }
 
-// Function to create anchor to be added to the text where necessary
-const createAnchor = (href, text) => {
-  const anchor = document.createElement('a');
-  anchor.href = href;
-  anchor.textContent = text;
-  return anchor;
+// Fetch language data
+const fetchLanguageData = async (lang) => {
+  const response = await fetch(`Languages/${lang}.json`);
+  return response.json();
 }
 
+// Change language
+async function changeLanguage(lang) {
+  const langData = await fetchLanguageData(lang);
+  updateContent(langData);
+}
 
+// Function called when language switch clicked
+const handleLangClick = () => {
+  lang = lang === 'en' ? 'fr' : 'en';
+  changeLanguage(lang);
+  langSwitch.checked = lang !== 'en';
+}
 /*
  Show current page section in Navbar
-*/ 
+*/
 const sections = document.querySelectorAll('section');
 const navList = document.querySelectorAll('nav .container ul li');
 
 const updateActiveNavLink = () => {
   let current = '';
-  
+
   sections.forEach(section => {
     const sectionTop = section.offsetTop;
     const sectionHeight = section.clientHeight;
@@ -80,7 +77,7 @@ const updateActiveNavLink = () => {
       current = 'contact';
     }
     // Handle other cases
-    else if (scrollY >= (sectionTop - (sectionHeight/8))) {
+    else if (scrollY >= (sectionTop - (sectionHeight / 8))) {
       current = section.getAttribute('id');
     }
 
@@ -101,5 +98,5 @@ window.addEventListener('scroll', updateActiveNavLink);
 langSwitch.addEventListener('click', handleLangClick);
 
 // Default to English if french switch not clicked
-let lang =  langSwitch.checked === true ? 'fr' : 'en';
+let lang = langSwitch.checked === true ? 'fr' : 'en';
 changeLanguage(lang);
