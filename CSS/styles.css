@@ -9,14 +9,27 @@
     margin: 0 auto;
 }
 
-ul {
-    margin: 0;
-    padding: 0;
+
+h1 {
+    font-size: 2rem;
+    text-align: center;
+    text-decoration: none;
+    padding: 6rem 0rem 2rem 0rem;
+    margin: -4rem;
+    background-color: #4e74bf;
+    color: #ffffff;
+    z-index: -2;
+    
 }
 
 h2 {
     color: #f28f38;
     font-size: 2.5rem;
+}
+
+ul {
+    margin: 0;
+    padding: 0;
 }
 
 #navbar {
@@ -25,6 +38,12 @@ h2 {
     position: sticky;
     top: 0;
 }
+
+#navbar .active  a{
+    color: #f28f38; /* Change the color to indicate the active section */
+  }
+  
+
 #navbar .container{
     display: flex;
     justify-content: space-between;
@@ -63,26 +82,17 @@ a {
     height: 80vh;
 }
 
-h1 {
-    font-size: 2rem;
-    text-align: center;
-    text-decoration: none;
-    padding: 2rem 0rem 2rem 0rem;
-    margin: 0;
-    background-color: #4e74bf;
-    color: #ffffff;
-}
 
-#about_me {
+#about {
     color: #ffffff;
     background-color: #455073;
-    padding: 2rem 1rem 2rem 1rem;
+    padding: 4rem 1rem 4rem 1rem;
     margin-top: 4rem;
     text-align: center;
     font-size: 1.1rem;
 }
 
-#about_me a {
+#about a {
     color: #f28f38;
 }
 
@@ -254,7 +264,7 @@ figcaption {
     left: 0;
     right: 0;
     bottom: 0;
-    background-color: #ccc;
+    background-color:#4e74bf;
     transition: .4s;
   }
   
@@ -271,7 +281,7 @@ figcaption {
   }
   
   input:checked + .slider {
-    background-color: #2196F3;
+    background-color:#4e74bf;
   }
   
   input:checked + .slider:before {

@@ -17,9 +17,10 @@
     <nav id="navbar">
         <div class="container">
             <ul>
-                <li data-i18n="about"></li>
-                <li data-i18n="portfolio"><a href="#portfolio_heading"></a></li>
-                <li data-i18n="contact" class="contact_nav"><a href="#contact"></a></li>
+                <li data-i18n="home" class="home active"></li>
+                <li data-i18n="about" class="about"></li>
+                <li data-i18n="portfolio" class="portfolio"></li>
+                <li data-i18n="contact" class="contact"></li>
             </ul>
             <div class="lang-toggle-container">
                 <span class="lang-text">EN</span>
@@ -31,141 +32,143 @@
             </div>
         </div>
     </nav>
-    <h1 data-i18n="h1_tag"></h1>
+    <section id="home">
+        <h1 data-i18n="h1_tag"></h1>
+    </section>
     <div class="container">
         <div id="main_image">
             <img src="images/main_image.jpg" alt="Man doing web design at a desk">
         </div>
     </div>
 
-    <div id="about_me">
+    <section id="about">
         <div class="container">
             <h2 data-i18n="about_title"></h2>
             <p data-i18n="about_p1"></p>
             <p data-i18n="about_p2"></p>
         </div>
-    </div>
+    </section>
 
-    <div id="portfolio">
+    <section id="portfolio">
         <div class="container">
-        <section id="portfolio_heading">
-            <h2 data-i18n="portfolio_title"></h2>
-            <p data-i18n="portfolio_intro"></p>
-        </section>
-
-        <section class="portfolio_list">
-            <div class="project_container">
-                <figure class="project_figure">
-                    <a href="http://galere.herokuapp.com/" target="_blank"><img src="images/galere.png"
-                            alt="Galère.AI Project Image"></a>
-                    <figcaption>Galère.AI</figcaption>
-                </figure>
-                <p data-i18n="galere_description">
-                </p>
-                <section class="project_links">
-                    <ul>
-                        <li class="github_link"><a href="https://github.com/AndrewScott85/laravel-sai1/"
-                                target="_blank"><i class="fa-brands fa-github-square"></i> Github</a></li>
-                        <li class="site_link"><a href="http://galere.herokuapp.com/" target="_blank"><i
-                                    class="fa-solid fa-globe"></i> Live</a></li>
-                    </ul>
-                </section>
-            </div>
-            <div class="project_container">
-                <figure class="project_figure">
-                    <a href="https://tubular-fe.netlify.app/" target="_blank"><img src="images/tubular.png"
-                            alt="Tubular Project Image"></a>
-                    <figcaption>Tubular</figcaption>
-                </figure>
-                <p data-i18n="tubular_description"></p>
-                <section class="project_links" id="tubular_links">
-                    <ul>
-                        <li class="github_link" id="github_link_fe"><a
-                                href="https://github.com/AndrewScott85/london-underground-fe-continuation"
-                                target="_blank"><i class="fa-brands fa-github-square"></i> Github FE</a></li>
-                        <li class="github_link" id="github_link_be"><a
-                                href="https://github.com/AndrewScott85/london-underground-be-continuation"
-                                target="_blank"><i class="fa-brands fa-github-square"></i> Github BE</a></li>
-                        <li class="site_link"><a href="https://tubular-fe.netlify.app/" target="_blank"><i
-                                    class="fa-solid fa-globe"></i> Live</a></li>
-                    </ul>
-                </section>
+            <div id="portfolio_heading">
+                <h2 data-i18n="portfolio_title"></h2>
+                <p data-i18n="portfolio_intro"></p>
             </div>
 
-            <div class="project_container">
-                <figure class="project_figure">
-                    <a href="https://dev.io-academy.uk/projects/2022-march/2022-mar-carcollection/index.php"
-                        target="_blank"><img src="images/carpe_diem.png"
-                            alt="Car Collection Application Project Image"></a>
-                    <figcaption>CarPe-Diem</figcaption>
-                </figure>
-                <p data-i18n="carpe_diem_description"></p>
-                <section class="project_links">
-                    <ul>
-                        <li class="github_link"><a href="https://github.com/iO-Academy/2022-mar-carcollection"
-                                target="_blank"><i class="fa-brands fa-github-square"></i> Github</a></li>
-                        <li class="site_link"><a
-                                href="https://dev.io-academy.uk/projects/2022-march/2022-mar-carcollection/index.php"
-                                target="_blank"><i class="fa-solid fa-globe"></i> Live</a></li>
-                    </ul>
-                </section>
+            <div class="portfolio_list">
+                <div class="project_container">
+                    <figure class="project_figure">
+                        <a href="http://galere.herokuapp.com/" target="_blank"><img src="images/galere.png"
+                                alt="Galère.AI Project Image"></a>
+                        <figcaption>Galère.AI</figcaption>
+                    </figure>
+                    <p data-i18n="galere_description">
+                    </p>
+                    <div class="project_links">
+                        <ul>
+                            <li class="github_link"><a href="https://github.com/AndrewScott85/laravel-sai1/"
+                                    target="_blank"><i class="fa-brands fa-github-square"></i> Github</a></li>
+                            <li class="site_link"><a href="http://galere.herokuapp.com/" target="_blank"><i
+                                        class="fa-solid fa-globe"></i> Live</a></li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="project_container">
+                    <figure class="project_figure">
+                        <a href="https://tubular-fe.netlify.app/" target="_blank"><img src="images/tubular.png"
+                                alt="Tubular Project Image"></a>
+                        <figcaption>Tubular</figcaption>
+                    </figure>
+                    <p data-i18n="tubular_description"></p>
+                    <div class="project_links" id="tubular_links">
+                        <ul>
+                            <li class="github_link" id="github_link_fe"><a
+                                    href="https://github.com/AndrewScott85/london-underground-fe-continuation"
+                                    target="_blank"><i class="fa-brands fa-github-square"></i> Github FE</a></li>
+                            <li class="github_link" id="github_link_be"><a
+                                    href="https://github.com/AndrewScott85/london-underground-be-continuation"
+                                    target="_blank"><i class="fa-brands fa-github-square"></i> Github BE</a></li>
+                            <li class="site_link"><a href="https://tubular-fe.netlify.app/" target="_blank"><i
+                                        class="fa-solid fa-globe"></i> Live</a></li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="project_container">
+                    <figure class="project_figure">
+                        <a href="https://dev.io-academy.uk/projects/2022-march/2022-mar-carcollection/index.php"
+                            target="_blank"><img src="images/carpe_diem.png"
+                                alt="Car Collection Application Project Image"></a>
+                        <figcaption>CarPe-Diem</figcaption>
+                    </figure>
+                    <p data-i18n="carpe_diem_description"></p>
+                    <div class="project_links">
+                        <ul>
+                            <li class="github_link"><a href="https://github.com/iO-Academy/2022-mar-carcollection"
+                                    target="_blank"><i class="fa-brands fa-github-square"></i> Github</a></li>
+                            <li class="site_link"><a
+                                    href="https://dev.io-academy.uk/projects/2022-march/2022-mar-carcollection/index.php"
+                                    target="_blank"><i class="fa-solid fa-globe"></i> Live</a></li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="project_container">
+                    <figure class="project_figure">
+                        <a href="https://2022-mar-scranmaster.dev.io-academy.uk/" target="_blank"><img
+                                src="images/scranmaster.png" alt="ScranMaster Project Image"></a>
+                        <figcaption>ScranMaster</figcaption>
+                    </figure>
+                    <p data-i18n="scranmaster_description"></p>
+                    <div class="project_links">
+                        <ul>
+                            <li class="github_link"><a href="https://github.com/io-Academy/2022-mar-scranmaster"
+                                    target="_blank"><i class="fa-brands fa-github-square"></i> Github</a></li>
+                            <li class="site_link"><a href="https://2022-mar-scranmaster.dev.io-academy.uk/"
+                                    target="_blank"><i class="fa-solid fa-globe"></i> Live</a></li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="project_container">
+                    <figure class="project_figure">
+                        <a href="https://dev.io-academy.uk/projects/2022-march/wordrunner/" target="_blank"><img
+                                src="images/word_runner.png" alt="WordRunner Project Image"></a>
+                        <figcaption>WordRunner</figcaption>
+                    </figure>
+                    <p data-i18n="wordrunner_description"></p>
+
+                    <div class="project_links">
+                        <ul>
+                            <li class="github_link"><a href="https://github.com/iO-Academy/2022-mar-word-finder"
+                                    target="_blank"><i class="fa-brands fa-github-square"></i> Github</a></li>
+                            <li class="site_link"><a href="https://dev.io-academy.uk/projects/2022-march/wordrunner/"
+                                    target="_blank"><i class="fa-solid fa-globe"></i> Live</a></li>
+                        </ul>
+                    </div>
+                </div>
+
             </div>
-
-            <div class="project_container">
-                <figure class="project_figure">
-                    <a href="https://2022-mar-scranmaster.dev.io-academy.uk/" target="_blank"><img
-                            src="images/scranmaster.png" alt="ScranMaster Project Image"></a>
-                    <figcaption>ScranMaster</figcaption>
-                </figure>
-                <p data-i18n="scranmaster_description"></p>
-                <section class="project_links">
-                    <ul>
-                        <li class="github_link"><a href="https://github.com/io-Academy/2022-mar-scranmaster"
-                                target="_blank"><i class="fa-brands fa-github-square"></i> Github</a></li>
-                        <li class="site_link"><a href="https://2022-mar-scranmaster.dev.io-academy.uk/"
-                                target="_blank"><i class="fa-solid fa-globe"></i> Live</a></li>
-                    </ul>
-                </section>
-            </div>
-
-            <div class="project_container">
-                <figure class="project_figure">
-                    <a href="https://dev.io-academy.uk/projects/2022-march/wordrunner/" target="_blank"><img
-                            src="images/word_runner.png" alt="WordRunner Project Image"></a>
-                    <figcaption>WordRunner</figcaption>
-                </figure>
-                <p data-i18n="wordrunner_description"></p>
-
-                <section class="project_links">
-                    <ul>
-                        <li class="github_link"><a href="https://github.com/iO-Academy/2022-mar-word-finder"
-                                target="_blank"><i class="fa-brands fa-github-square"></i> Github</a></li>
-                        <li class="site_link"><a href="https://dev.io-academy.uk/projects/2022-march/wordrunner/"
-                                target="_blank"><i class="fa-solid fa-globe"></i> Live</a></li>
-                    </ul>
-                </section>
-            </div>
-
-        </section>
         </div>
-    </div>
+    </section>
 
 
-    <footer id="contact">
+    <section id="contact">
         <div class="container">
-        <h2>Contact</h2>
-        <ul>
-            <li><span><i class="fa-solid fa-envelope"></i></span>andrew.scott.dev@gmai1.com</li>
-            <li><span><i class="fa-brands fa-github-square"></i></span><a href="https://github.com/AndrewScott85"
-                    target="_blank">github.com/AndrewScott85</a>
-            </li>
-        </ul>
-        <br>
-        <br>
-        <p data-i18n="vector_credit"></a>
-        </p>
-    </div>
-    </footer>
+            <h2>Contact</h2>
+            <ul>
+                <li><span><i class="fa-solid fa-envelope"></i></span>andrew.scott.dev@gmail.com</li>
+                <li><span><i class="fa-brands fa-github-square"></i></span><a href="https://github.com/AndrewScott85"
+                        target="_blank">github.com/AndrewScott85</a>
+                </li>
+            </ul>
+            <br>
+            <br>
+            <p data-i18n="vector_credit"></a>
+            </p>
+        </div>
+    </section>
     </div>
 </body>
 

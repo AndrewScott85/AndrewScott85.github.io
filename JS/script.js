@@ -1,8 +1,32 @@
+
+
+/*
+Switch language between English and French
+*/
+// Select language switch
 const langSwitch = document.querySelector('#lang-switch');
 
+// Function called when language switch clicked
+const handleLangClick = () => {
+  lang = lang === 'en' ? 'fr' : 'en';
+  changeLanguage(lang);
+  langSwitch.checked = lang !== 'en';
+}
+
+// Change language
+async function changeLanguage(lang) {
+  const langData = await fetchLanguageData(lang);
+    updateContent(langData);
+}
+
+// Fetch language data
+const fetchLanguageData = async(lang) => {
+  const response = await fetch(`Languages/${lang}.json`);
+  return response.json();
+}
 
 
-// Function to update content based on selected language
+// Update content based on selected language
 const updateContent = (langData) => {
   // Select all relevant tags and iterate through the json
   document.querySelectorAll('[data-i18n]').forEach(element => {
@@ -30,30 +54,8 @@ const updateContent = (langData) => {
   });
 }
 
-
-// Function to fetch language data
-const fetchLanguageData = async(lang) => {
-  const response = await fetch(`Languages/${lang}.json`);
-  return response.json();
-}
-
-// Function to change language
-async function changeLanguage(lang) {
-  
-  const langData = await fetchLanguageData(lang);
-    updateContent(langData);
-}
-
-const handleLangClick = () => {
-  console.log(langSwitch.checked);
-  lang = lang === 'en' ? 'fr' : 'en';
-  changeLanguage(lang);
-  langSwitch.checked = lang !== 'en';
-  console.log(langSwitch.checked);
-}
-
-
-function createAnchor(href, text) {
+// Function to create anchor to be added to the text where necessary
+const createAnchor = (href, text) => {
   const anchor = document.createElement('a');
   anchor.href = href;
   anchor.textContent = text;
@@ -61,9 +63,43 @@ function createAnchor(href, text) {
 }
 
 
+/*
+ Show current page section in Navbar
+*/ 
+const sections = document.querySelectorAll('section');
+const navList = document.querySelectorAll('nav .container ul li');
+
+const updateActiveNavLink = () => {
+  let current = '';
+  
+  sections.forEach(section => {
+    const sectionTop = section.offsetTop;
+    const sectionHeight = section.clientHeight;
+    // Ensure detection works at bottom of the page
+    if (scrollY + window.innerHeight >= document.documentElement.scrollHeight) {
+      current = 'contact';
+    }
+    // Handle other cases
+    else if (scrollY >= (sectionTop - (sectionHeight/8))) {
+      current = section.getAttribute('id');
+    }
+
+  })
+
+  navList.forEach(item => {
+    item.classList.remove('active');
+    if (item.classList.contains(current)) {
+      item.classList.add('active')
+    }
+  })
+}
+
+// Listen for scroll events
+window.addEventListener('scroll', updateActiveNavLink);
+
 // Add event listener for translation button
 langSwitch.addEventListener('click', handleLangClick);
 
-// Default to English
-let lang = 'en';
+// Default to English if french switch not clicked
+let lang =  langSwitch.checked === true ? 'fr' : 'en';
 changeLanguage(lang);
