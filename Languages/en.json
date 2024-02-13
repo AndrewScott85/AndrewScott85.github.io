@@ -9,10 +9,110 @@
     "about_p2": "After earning my degree in mechanical engineering and working for several years in the energy efficiency sector, I took a career break to travel and teach scuba diving before focusing on my interest in tech. I recently completed a 16 week full-stack coding bootcamp at <a href=\"https://io-academy.uk\">iO Academy</a> in Bath, UK and I am now seeking professional opportunities to start my career in software development.",
     "portfolio_title": "Portfolio",
     "portfolio_intro": "Below is a selection of projects showcasing some of the technologies I've worked with.",
-    "galere_description": "A blog site with content created using generative AI. Site made with Laravel, Inertia, Jetstream, Vue, & Tailwind CSS. Guests can view posts, while registered users can login and create/edit/delete posts. Images were created using Nightcafe and Midjourney, while titles and descriptions were created using ChatGPT. Future developments will include ability to like and comment on posts.",
-    "tubular_description": "A full-stack route planning app for the London Underground. Built with supplied mock data using the MERN stack with the back end deployed on heroku and the front end on netlify. On choosing a start and end station, the app finds and displays direct routes first, then those requiring changes, in descending order of speed. This has probably been my favourite app to work on and has been great practice at full-stack javascript development.",
-    "carpe_diem_description": "An OOP application in PHP, styled using SASS. This application involved populating a MySQL database using data in JSON form from an API, then fetching from that database to display a searchable, filterable collection of cars. Clicking on any of the cars opens a new page showing car information in more detail. This was a great project for getting experience working in OOP, designing App architecture from the front end to the back end, using APIs and working with SQL.",
-    "scranmaster_description": "The front end for a food delivery app, built in React and styled using Bootstrap to match supplied high fidelity wireframes. Fetching from an API displays a list of available restaurants and a filterable menu for each restaurant. Items can be added to an order basket, which calculates the total cost. Submitting an order opens a modal window displaying the ETA and a progress bar. This app provided a good chance to get familiar with using React and Bootstrap in a component based design.",
-    "wordrunner_description": "A word guessing game built using javascript. Target words and synonyms are fetched from an api, and on starting a new game, a random target word is selected, and its synonyms are displayed to the player. The player is then given 5 attempts, or a maximum of 30 seconds, to guess the target word. This app was really fun to make, and provided our first experience of working collaboratively in a Scrum team, as well as good practice with javascript and CSS.",
+    "projects": [
+        {
+            "title": "Galère",
+            "stack": "Full-Stack",
+            "summary": "AI-Generated Image Sharing App",
+            "description": "Explore the world of AI-generated art and share your creativity with friends and family using OpenAI. Users can upload images and generate imaginary descriptions. Share your creations with others in albums.",
+            "technologies": [
+                "Laravel",
+                "Inertia",
+                "Jetstream",
+                "Vue",
+                "Tailwind CSS",
+                "AWS"
+            ],
+            "image": "images/galere.png",
+            "github": [
+                {
+                    "text": "Github",
+                    "url": "https://github.com/AndrewScott85/laravel-sail"
+                }
+            ],
+            "live": "http://galere.herokuapp.com/"
+        },
+        {
+            "title": "Tubular",
+            "stack": "Full-Stack",
+            "summary": "London Underground Route Planner",
+            "description": "A MERN stack route planner for the London Underground. Finds and displays both direct routes and routes requiring a change of station, based on start and end stations. (Uses mock data)",
+            "technologies": [
+                "MongoDB",
+                "Express",
+                "React",
+                "Node.js"
+            ],
+            "image": "images/tubular.png",
+            "github": [
+                {
+                    "text": "Github FE",
+                    "url": "https://github.com/AndrewScott85/london-underground-fe-continuation"
+                },
+                {
+                    "text": "Github BE",
+                    "url": "https://github.com/AndrewScott85/london-underground-be-continuation"
+                }
+            ],
+            "live": "http://galere.herokuapp.com/"
+        },
+        {
+            "title": "CarpeDiem",
+            "stack": "Full-Stack",
+            "summary": "OOP PHP Car Collection App",
+            "description": "An OOP PHP application showcasing car listings with search, filter, and detailed information functionalities.",
+            "technologies": [
+                "PHP",
+                "MySQL",
+                "SASS",
+                "API"
+            ],
+            "image": "images/carpe_diem.png",
+            "github": [
+                {
+                    "text": "Github",
+                    "url": "https://github.com/iO-Academy/2022-mar-carcollection"
+                }
+            ],
+            "live": "https://dev.io-academy.uk/projects/2022-march/2022-mar-carcollection/index.php"
+        },
+        {
+            "title": "ScranMaster",
+            "stack": "Front-End",
+            "summary": "Food Delivery App Front-End",
+            "description": "A React food delivery app front-end built to match supplied high-fidelity wireframes. Features restaurant list, filtering, order basket, and progress tracking.",
+            "technologies": [
+                "React",
+                "Bootstrap"
+            ],
+            "image": "images/scranmaster.png",
+            "github": [
+                {
+                    "text": "Github",
+                    "url": "https://github.com/io-Academy/2022-mar-scranmaster"
+                }
+            ],
+            "live": "https://2022-mar-scranmaster.dev.io-academy.uk/"
+        },
+        {
+            "title": "WordRunner",
+            "stack": "Front-End",
+            "summary": "Word Guessing Game",
+            "description": "Test your vocabulary skills and have fun in this fast-paced word challenge with a limited number of attempts.",
+            "technologies": [
+                "JavaScript",
+                "HTML",
+                "CSS"
+            ],
+            "image": "images/word_runner.png",
+            "github": [
+                {
+                    "text": "Github",
+                    "url": "https://github.com/iO-Academy/2022-mar-word-finder"
+                }
+            ],
+            "live": "https://dev.io-academy.uk/projects/2022-march/wordrunner/"
+        }
+    ],
     "vector_credit": "Vector artwork from <a href=\"https://www.vecteezy.com/free-vector/mobile-application-development\">Vecteezy</a>"
 }

@@ -56,7 +56,7 @@ ul {
     gap: 1rem; 
     font-size: 1.5rem;
     justify-items: space-between;
-    margin-left: 2rem;
+    margin-left: 1rem;
 }
 
 
@@ -152,7 +152,7 @@ a {
     width: 100%;
     aspect-ratio: 3/2;
     border-radius: 1rem;
-    max-width: 400px;
+    /* max-width: 400px; */
     border: 0.1rem solid #ffffff50;
 }
 
