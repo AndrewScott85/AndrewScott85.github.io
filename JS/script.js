@@ -93,7 +93,9 @@ const updateActiveNavLink = () => {
   })
 }
 
-
+/*
+Populate Project Section
+*/ 
 const createProjectContainer = (project) => {
   const container = document.createElement('div');
   container.className = 'project_container';
@@ -112,9 +114,15 @@ const createProjectContainer = (project) => {
 
   container.appendChild(figure);
 
+  // Create container to hide all details
+  const details = document.createElement('div');
+  details.className = 'project_details';
+  details.style.display = 'none';
+
+
   const description = document.createElement('p');
   description.textContent = project.description;
-  container.appendChild(description);
+  details.appendChild(description);
 
   const projectLinks = document.createElement('div');
   projectLinks.className = 'project_links';
@@ -126,7 +134,7 @@ const createProjectContainer = (project) => {
     const a = document.createElement('a');
     a.href = link.url;
     a.target = '_blank';
-    a.textContent = link.text;
+    a.textContent = ' ' + link.text;
     const icon = document.createElement('i');
     icon.className = 'fa-brands fa-github-square';
     a.prepend(icon); // Prepend the icon to the anchor text
@@ -139,6 +147,7 @@ const createProjectContainer = (project) => {
   const liveA = document.createElement('a');
   liveA.href = project.liveUrl;
   liveA.target = '_blank';
+  liveA.textContent = ' Live';
   const liveIcon = document.createElement('i');
   liveIcon.className = 'fa-solid fa-globe';
   liveA.prepend(liveIcon); // Prepend the icon to the anchor text
@@ -146,7 +155,17 @@ const createProjectContainer = (project) => {
   ul.appendChild(liveLink);
 
   projectLinks.appendChild(ul);
-  container.appendChild(projectLinks);
+  details.appendChild(projectLinks);
+
+  // Event listener to toggle the display of details
+  img.addEventListener('click', () => {
+    const isDetailsVisible = details.style.display !== 'none';
+    details.style.display = isDetailsVisible ? 'none' : 'block'; // Toggle visibility
+    container.classList.toggle('expanded'); // Toggle a class for expanded styling
+  });
+
+    // Append the details to the container
+    container.appendChild(details);
 
   return container;
 };

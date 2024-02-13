@@ -30,7 +30,7 @@
                     "url": "https://github.com/AndrewScott85/laravel-sail"
                 }
             ],
-            "live": "http://galere.herokuapp.com/"
+            "liveUrl": "http://galere.herokuapp.com/"
         },
         {
             "title": "Tubular",
@@ -54,7 +54,7 @@
                     "url": "https://github.com/AndrewScott85/london-underground-be-continuation"
                 }
             ],
-            "live": "http://galere.herokuapp.com/"
+            "liveUrl": "http://galere.herokuapp.com/"
         },
         {
             "title": "CarpeDiem",
@@ -74,7 +74,7 @@
                     "url": "https://github.com/iO-Academy/2022-mar-carcollection"
                 }
             ],
-            "live": "https://dev.io-academy.uk/projects/2022-march/2022-mar-carcollection/index.php"
+            "liveUrl": "https://dev.io-academy.uk/projects/2022-march/2022-mar-carcollection/index.php"
         },
         {
             "title": "ScranMaster",
@@ -92,7 +92,7 @@
                     "url": "https://github.com/io-Academy/2022-mar-scranmaster"
                 }
             ],
-            "live": "https://2022-mar-scranmaster.dev.io-academy.uk/"
+            "liveUrl": "https://2022-mar-scranmaster.dev.io-academy.uk/"
         },
         {
             "title": "WordRunner",
@@ -111,7 +111,7 @@
                     "url": "https://github.com/iO-Academy/2022-mar-word-finder"
                 }
             ],
-            "live": "https://dev.io-academy.uk/projects/2022-march/wordrunner/"
+            "liveUrl": "https://dev.io-academy.uk/projects/2022-march/wordrunner/"
         }
     ],
     "vector_credit": "Vector artwork from <a href=\"https://www.vecteezy.com/free-vector/mobile-application-development\">Vecteezy</a>"
