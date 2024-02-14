@@ -1,6 +1,6 @@
 {
     "home": "<a href=\"#home\">Home</a>",
-    "about": "<a href=\"#about_me\">About</a>",
+    "about": "<a href=\"#about\">About</a>",
     "portfolio": "<a href=\"#portfolio\">Portfolio</a>",
     "contact": "<a href=\"#contact\">Contact</a>",
     "h1_tag": "Hi, I'm Andrew, a full-stack web developer.",
@@ -9,6 +9,7 @@
     "about_p2": "After earning my degree in mechanical engineering and working for several years in the energy efficiency sector, I took a career break to travel and teach scuba diving before focusing on my interest in tech. I recently completed a 16 week full-stack coding bootcamp at <a href=\"https://io-academy.uk\">iO Academy</a> in Bath, UK and I am now seeking professional opportunities to start my career in software development.",
     "portfolio_title": "Portfolio",
     "portfolio_intro": "Below is a selection of projects showcasing some of the technologies I've worked with.",
+    "project_names" : ["Galère", "Tubular", "CarpeDiem", "ScranMaster", "WordRunner"],
     "projects": [
         {
             "title": "Galère",
@@ -67,7 +68,7 @@
                 "SASS",
                 "API"
             ],
-            "image": "images/carpe_diem.png",
+            "image": "images/carpediem.png",
             "github": [
                 {
                     "text": "Github",
@@ -104,7 +105,7 @@
                 "HTML",
                 "CSS"
             ],
-            "image": "images/word_runner.png",
+            "image": "images/wordrunner.png",
             "github": [
                 {
                     "text": "Github",

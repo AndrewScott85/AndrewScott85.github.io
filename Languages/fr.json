@@ -1,6 +1,6 @@
 {
   "home": "<a href=\"#home\">Home</a>",
-  "about": "<a href=\"#about_me\">À propos</a>",
+  "about": "<a href=\"#about\">À propos</a>",
   "portfolio": "<a href=\"#portfolio\">Portfolio</a>",
   "contact": "<a href=\"#contact\">Contact</a>",
   "h1_tag": "Bonjour, je suis Andrew, developpeur web full-stack",

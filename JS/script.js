@@ -19,9 +19,8 @@ const updateContent = (langData) => {
   // Select all relevant tags and iterate through the json
   document.querySelectorAll('[data-i18n]').forEach(element => {
     const key = element.getAttribute('data-i18n');
-    console.log(key);
     const content = langData[key];
-   
+
     // Clear existing content safely
     element.textContent = '';
 
@@ -92,10 +91,27 @@ const updateActiveNavLink = () => {
     }
   })
 }
+const projectModal = document.querySelector('.projectModal');
+const close = document.querySelector('.close');
+
+close.addEventListener('click', () => {
+  // Remove the last child (assuming it's the modal image)
+  projectModal.lastChild && projectModal.removeChild(projectModal.lastChild);
+  projectModal.style.display = 'none';
+});
+
+const handleModal = (img) => {
+  const modalCont = document.createElement('div');
+  modalCont.className = 'modal_proj_cont';
+  const modalImg = img.cloneNode(true);
+  modalCont.appendChild(modalImg);
+  projectModal.appendChild(modalCont);
+  projectModal.style.display = 'flex';
+};
 
 /*
 Populate Project Section
-*/ 
+*/
 const createProjectContainer = (project) => {
   const container = document.createElement('div');
   container.className = 'project_container';
@@ -114,58 +130,57 @@ const createProjectContainer = (project) => {
 
   container.appendChild(figure);
 
-  // Create container to hide all details
-  const details = document.createElement('div');
-  details.className = 'project_details';
-  details.style.display = 'none';
-
-
-  const description = document.createElement('p');
-  description.textContent = project.description;
-  details.appendChild(description);
-
-  const projectLinks = document.createElement('div');
-  projectLinks.className = 'project_links';
-
-  const ul = document.createElement('ul');
-  project.github.forEach(link => {
-    const li = document.createElement('li');
-    li.className = 'github_link';
-    const a = document.createElement('a');
-    a.href = link.url;
-    a.target = '_blank';
-    a.textContent = ' ' + link.text;
-    const icon = document.createElement('i');
-    icon.className = 'fa-brands fa-github-square';
-    a.prepend(icon); // Prepend the icon to the anchor text
-    li.appendChild(a);
-    ul.appendChild(li);
-  });
-
-  const liveLink = document.createElement('li');
-  liveLink.className = 'site_link';
-  const liveA = document.createElement('a');
-  liveA.href = project.liveUrl;
-  liveA.target = '_blank';
-  liveA.textContent = ' Live';
-  const liveIcon = document.createElement('i');
-  liveIcon.className = 'fa-solid fa-globe';
-  liveA.prepend(liveIcon); // Prepend the icon to the anchor text
-  liveLink.appendChild(liveA);
-  ul.appendChild(liveLink);
-
-  projectLinks.appendChild(ul);
-  details.appendChild(projectLinks);
-
   // Event listener to toggle the display of details
-  img.addEventListener('click', () => {
-    const isDetailsVisible = details.style.display !== 'none';
-    details.style.display = isDetailsVisible ? 'none' : 'block'; // Toggle visibility
-    container.classList.toggle('expanded'); // Toggle a class for expanded styling
-  });
+  img.addEventListener('click', () => handleModal(img));
 
-    // Append the details to the container
-    container.appendChild(details);
+  // // Create container to hide all details
+  // const details = document.createElement('div');
+  // details.className = 'project_details';
+  // details.style.display = 'none';
+
+
+  // const description = document.createElement('p');
+  // description.textContent = project.description;
+  // details.appendChild(description);
+
+  // const projectLinks = document.createElement('div');
+  // projectLinks.className = 'project_links';
+
+  // const ul = document.createElement('ul');
+  // project.github.forEach(link => {
+  //   const li = document.createElement('li');
+  //   li.className = 'github_link';
+  //   const a = document.createElement('a');
+  //   a.href = link.url;
+  //   a.target = '_blank';
+  //   a.textContent = ' ' + link.text;
+  //   const icon = document.createElement('i');
+  //   icon.className = 'fa-brands fa-github-square';
+  //   a.prepend(icon); // Prepend the icon to the anchor text
+  //   li.appendChild(a);
+  //   ul.appendChild(li);
+  // });
+
+  // const liveLink = document.createElement('li');
+  // liveLink.className = 'site_link';
+  // const liveA = document.createElement('a');
+  // liveA.href = project.liveUrl;
+  // liveA.target = '_blank';
+  // liveA.textContent = ' Live';
+  // const liveIcon = document.createElement('i');
+  // liveIcon.className = 'fa-solid fa-globe';
+  // liveA.prepend(liveIcon); // Prepend the icon to the anchor text
+  // liveLink.appendChild(liveA);
+  // ul.appendChild(liveLink);
+
+  // projectLinks.appendChild(ul);
+  // details.appendChild(projectLinks);
+
+
+
+
+  //   // Append the details to the container
+  //   container.appendChild(details);
 
   return container;
 };
