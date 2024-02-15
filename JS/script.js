@@ -91,23 +91,7 @@ const updateActiveNavLink = () => {
     }
   })
 }
-const projectModal = document.querySelector('.projectModal');
-const close = document.querySelector('.close');
 
-close.addEventListener('click', () => {
-  // Remove the last child (assuming it's the modal image)
-  projectModal.lastChild && projectModal.removeChild(projectModal.lastChild);
-  projectModal.style.display = 'none';
-});
-
-const handleModal = (img) => {
-  const modalCont = document.createElement('div');
-  modalCont.className = 'modal_proj_cont';
-  const modalImg = img.cloneNode(true);
-  modalCont.appendChild(modalImg);
-  projectModal.appendChild(modalCont);
-  projectModal.style.display = 'flex';
-};
 
 /*
 Populate Project Section
@@ -130,57 +114,82 @@ const createProjectContainer = (project) => {
 
   container.appendChild(figure);
 
-  // Event listener to toggle the display of details
-  img.addEventListener('click', () => handleModal(img));
 
-  // // Create container to hide all details
-  // const details = document.createElement('div');
-  // details.className = 'project_details';
-  // details.style.display = 'none';
+  const stack = document.createElement('p');
+  stack.className = 'stack';
+  stack.textContent = project.stack;
+  container.appendChild(stack);
 
+  const description = document.createElement('p');
+  description.className = 'projectDescription';
+  description.textContent = project.description;
+  container.appendChild(description);
 
-  // const description = document.createElement('p');
-  // description.textContent = project.description;
-  // details.appendChild(description);
+  const techTitle = document.createElement('p');
+  techTitle.className = 'techTitle';
+  techTitle.textContent = 'Technologies Used';
+  container.append(techTitle);
 
-  // const projectLinks = document.createElement('div');
-  // projectLinks.className = 'project_links';
-
-  // const ul = document.createElement('ul');
-  // project.github.forEach(link => {
-  //   const li = document.createElement('li');
-  //   li.className = 'github_link';
-  //   const a = document.createElement('a');
-  //   a.href = link.url;
-  //   a.target = '_blank';
-  //   a.textContent = ' ' + link.text;
-  //   const icon = document.createElement('i');
-  //   icon.className = 'fa-brands fa-github-square';
-  //   a.prepend(icon); // Prepend the icon to the anchor text
-  //   li.appendChild(a);
-  //   ul.appendChild(li);
-  // });
-
-  // const liveLink = document.createElement('li');
-  // liveLink.className = 'site_link';
-  // const liveA = document.createElement('a');
-  // liveA.href = project.liveUrl;
-  // liveA.target = '_blank';
-  // liveA.textContent = ' Live';
-  // const liveIcon = document.createElement('i');
-  // liveIcon.className = 'fa-solid fa-globe';
-  // liveA.prepend(liveIcon); // Prepend the icon to the anchor text
-  // liveLink.appendChild(liveA);
-  // ul.appendChild(liveLink);
-
-  // projectLinks.appendChild(ul);
-  // details.appendChild(projectLinks);
+  const techList = document.createElement('ul');
+  project.technologies.forEach(item => {
+    const techItem = document.createElement('li');
+    techItem.textContent = item;
+    techList.appendChild(techItem);
+  });
+  container.appendChild(techList);
 
 
+  const projectLinks = document.createElement('div');
+  projectLinks.className = 'project_links';
+
+  const ul = document.createElement('ul');
+
+  let isMultiGit = false;
+  if (project.github.length >1) {
+    isMultiGit = true;
+  }
+  project.github.forEach(link => {
+    const li = document.createElement('li');
+    li.className = 'github_link';
+    if (isMultiGit) {
+      if (link === project.github[0]) {
+      li.id = 'github_link_fe';
+      }
+      else {
+        li.id = 'github_be_link_be';
+      }
+    }
+        const a = document.createElement('a');
+    a.href = link.url;
+    a.target = '_blank';
+    a.textContent = ' ' + link.text;
+    const icon = document.createElement('i');
+    icon.className = 'fa-brands fa-github-square';
+    a.prepend(icon); // Prepend the icon to the anchor text
+    li.appendChild(a);
+    ul.appendChild(li);
+  });
+
+  const liveLink = document.createElement('li');
+  liveLink.className = 'site_link';
+  const liveA = document.createElement('a');
+  liveA.href = project.liveUrl;
+  liveA.target = '_blank';
+  liveA.textContent = ' Live';
+  const liveIcon = document.createElement('i');
+  liveIcon.className = 'fa-solid fa-globe';
+  liveA.prepend(liveIcon); // Prepend the icon to the anchor text
+  liveLink.appendChild(liveA);
+  ul.appendChild(liveLink);
+
+  projectLinks.appendChild(ul);
+  container.appendChild(projectLinks);
 
 
-  //   // Append the details to the container
-  //   container.appendChild(details);
+
+
+  // Append the details to the container
+  // container.appendChild(details);
 
   return container;
 };

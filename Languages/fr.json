@@ -1,18 +1,117 @@
 {
-  "home": "<a href=\"#home\">Home</a>",
+  "home": "<a href=\"#home\">Accueil</a>",
   "about": "<a href=\"#about\">À propos</a>",
   "portfolio": "<a href=\"#portfolio\">Portfolio</a>",
   "contact": "<a href=\"#contact\">Contact</a>",
-  "h1_tag": "Bonjour, je suis Andrew, developpeur web full-stack",
+  "h1_tag": "Bonjour, je suis Andrew, développeur web full-stack.",
   "about_title": "À propos de moi",
-  "about_p1": "Je suis un développeur de logiciels full-stack sympathique et enthousiaste, passionné par le potentiel du code pour résoudre des problèmes. Dans mes temps libres, j'aime lire, voyager, cuisiner, nager et apprendre des langues.",
-  "about_p2": "Après avoir obtenu mon diplôme en génie mécanique et travaillé pendant plusieurs années dans le secteur de l'efficacité énergétique, j'ai pris une pause carrière pour voyager et enseigner la plongée sous-marine avant de me concentrer sur mon intérêt pour la technologie. J'ai récemment terminé un bootcamp de codage full-stack de 16 semaines chez <a href=\"https://io-academy.uk\">iO Academy</a> à Bath, au Royaume-Uni, et je suis maintenant à la recherche d'opportunités professionnelles pour démarrer ma carrière dans le développement logiciel.",
+  "about_p1": "Je suis un développeur logiciel full-stack enthousiaste, passionné par le potentiel du code pour résoudre des problèmes. Dans mon temps libre, j'aime la natation, la plongée, passer du temps en plein air, cuisiner et lire.",
+  "about_p2": "Après avoir obtenu mon diplôme d'ingénieur en mécanique et travaillé pendant plusieurs années dans le secteur de l'efficacité énergétique, j'ai pris une pause pour voyager et enseigner la plongée sous-marine avant de me concentrer sur mon intérêt pour la technologie. Je suis diplômé du bootcamp de codage full-stack de 16 semaines à <a href=\"https://io-academy.uk\">iO Academy</a> à Bath, au Royaume-Uni, et après avoir récemment déménagé à Toulouse, je suis à la recherche d'opportunités professionnelles ici.",
   "portfolio_title": "Portfolio",
   "portfolio_intro": "Voici une sélection de projets présentant certaines des technologies avec lesquelles j'ai travaillé.",
-  "galere_description": "Un site de blog avec du contenu créé à l'aide d'IA générative. Site réalisé avec Laravel, Inertia, Jetstream, Vue et Tailwind CSS. Les visiteurs peuvent consulter les articles, tandis que les utilisateurs enregistrés peuvent se connecter et créer/modifier/supprimer des articles. Les images ont été créées à l'aide de Nightcafe et Midjourney, tandis que les titres et descriptions ont été créés à l'aide de ChatGPT. Les développements futurs incluront la possibilité d'aimer et de commenter les publications.",
-  "tubular_description": "Une application de planification d'itinéraire à part entière pour le métro londonien. Construit avec des données fictives fournies à l'aide de la pile MERN, le back-end étant déployé sur Heroku et le front-end sur Netlify. En choisissant une station de départ et d'arrivée, l'application recherche et affiche d'abord les itinéraires directs, puis ceux nécessitant des changements, par ordre décroissant de vitesse. C'est probablement l'application sur laquelle j'ai préféré travailler et qui a été un excellent exercice de développement JavaScript full-stack.",
-  "carpe_diem_description": "Une application POO en PHP, stylisée à l'aide de SASS. Cette application consistait à remplir une base de données MySQL à l'aide de données au format JSON provenant d'une API, puis à extraire de cette base de données pour afficher une collection de voitures interrogeable et filtrable. En cliquant sur l'une des voitures, une nouvelle page s'ouvre affichant les informations sur la voiture plus en détail. C'était un excellent projet pour acquérir de l'expérience en travaillant dans le domaine de la POO, en concevant l'architecture d'une application du front-end au back-end, en utilisant des API et en travaillant avec SQL.",
-  "scranmaster_description": "Le front-end d'une application de livraison de nourriture, construit en React et stylisé en utilisant Bootstrap pour correspondre aux wireframes haute fidélité fournis. L'extraction d'une API affiche une liste des restaurants disponibles et un menu filtrable pour chaque restaurant. Les articles peuvent être ajoutés à un panier de commande, qui calcule le coût total. L'envoi d'une commande ouvre une fenêtre modale affichant l'ETA et une barre de progression. Cette application a été une bonne occasion de se familiariser avec l'utilisation de React et Bootstrap dans une conception basée sur des composants.",
-  "wordrunner_description": "Un jeu de devinette de mots construit en javascript. Les mots cibles et les synonymes sont récupérés à partir d'une API, et au début d'un nouveau jeu, un mot cible aléatoire est sélectionné et ses synonymes sont affichés au joueur. Le joueur dispose alors de 5 tentatives, ou d'un maximum de 30 secondes, pour deviner le mot cible. Cette application était vraiment amusante à créer et a été notre première expérience de travail collaboratif dans une équipe Scrum, ainsi qu'une bonne pratique du javascript et du CSS.",
-  "vector_credit": "Illustrations vectorielles de <a href=\"https://www.vecteezy.com/free-vector/mobile-application-development\">Vecteezy</a>"
+  "projects": [
+    {
+      "title": "Galère.AI",
+      "stack": "Full-Stack",
+      "summary": "Application de partage d'images générées par l'IA",
+      "description": "Un site pour télécharger et partager de l'art généré par l'IA avec des descriptions. Les images sont compressées et stockées sur AWS. La prochaine version inclura la génération d'images et la description automatique via l'API Google Gemini.",
+      "technologies": [
+        "Laravel",
+        "Inertia",
+        "Jetstream",
+        "Vue",
+        "Tailwind CSS",
+        "AWS"
+      ],
+      "image": "images/galere.png",
+      "github": [
+        {
+          "text": "Github",
+          "url": "https://github.com/AndrewScott85/laravel-sail"
+        }
+      ],
+      "liveUrl": "http://galere.herokuapp.com/"
+    },
+    {
+      "title": "Tubular",
+      "stack": "Full-Stack",
+      "summary": "Planificateur d'itinéraire du métro londonien",
+      "description": "Un planificateur d'itinéraire en MERN pour le métro londonien. Trouve et affiche les itinéraires directs et les itinéraires nécessitant un changement de station, en fonction des stations de départ et d'arrivée. (Utilise des données fictives)",
+      "technologies": [
+        "MongoDB",
+        "Express",
+        "React",
+        "Node.js"
+      ],
+      "image": "images/tubular.png",
+      "github": [
+        {
+          "text": "Github FE",
+          "url": "https://github.com/AndrewScott85/london-underground-fe-continuation"
+        },
+        {
+          "text": "Github BE",
+          "url": "https://github.com/AndrewScott85/london-underground-be-continuation"
+        }
+      ],
+      "liveUrl": "http://galere.herokuapp.com/"
+    },
+    {
+      "title": "CarPe-Diem",
+      "stack": "Full-Stack",
+      "summary": "Application de collection de voitures POO PHP",
+      "description": "Une application PHP présentant des listes de voitures avec des fonctionnalités de recherche, de filtrage et d'informations détaillées. Construit dans un style de programmation orientée objet.",
+      "technologies": [
+        "PHP",
+        "MySQL",
+        "SASS"
+      ],
+      "image": "images/carpediem.png",
+      "github": [
+        {
+          "text": "Github",
+          "url": "https://github.com/iO-Academy/2022-mar-carcollection"
+        }
+      ],
+      "liveUrl": "https://dev.io-academy.uk/projects/2022-march/2022-mar-carcollection/index.php"
+    },
+    {
+      "title": "ScranMaster",
+      "stack": "Front-End",
+      "summary": "Application front-end de livraison de nourriture",
+      "description": "Front-end d'une application de livraison de nourriture React construit pour correspondre aux wireframes haute fidélité fournies. Fonctionnalités : liste des restaurants, filtrage, panier de commande et suivi de la progression.",
+      "technologies": [
+        "React",
+        "Bootstrap"
+      ],
+      "image": "images/scranmaster.png",
+      "github": [
+        {
+          "text": "Github",
+          "url": "https://github.com/io-Academy/2022-mar-scranmaster"
+        }
+      ],
+      "liveUrl": "https://2022-mar-scranmaster.dev.io-academy.uk/"
+    },
+    {
+      "title": "WordRunner",
+      "stack": "Front-End",
+      "summary": "Jeu de devinettes de mots",
+      "description": "Un jeu de devinettes de mots aléatoire où une liste de synonymes est affichée et l'utilisateur doit deviner le mot cible avec un nombre limité de vies avant la fin du jeu.",
+      "technologies": [
+        "JavaScript",
+        "HTML",
+        "CSS"
+      ],
+      "image": "images/wordrunner.png",
+      "github": [
+        {
+          "text": "Github",
+          "url": "https://github.com/iO-Academy/2022-mar-word-finder"
+        }
+      ],
+      "liveUrl": "https://dev.io-academy.uk/projects/2022-march/wordrunner/"
+    }
+  ],
+  "vector_credit": "Vector artwork from <a href=\"https://www.vecteezy.com/free-vector/mobile-application-development\">Vecteezy</a>"
 }
