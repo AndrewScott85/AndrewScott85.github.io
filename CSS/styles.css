@@ -131,10 +131,10 @@ a {
 }
 
 .project_container {
-    display: flex;
-    flex-direction: column;
+    display: grid;
+    grid-template-rows: 5;
     align-items: center;
-    justify-content: center;
+    justify-items: center;
     margin-bottom: 2rem;
     border: 1px solid #ffffff50;
     border-radius: 0.1rem;
@@ -146,11 +146,18 @@ a {
     margin: 0.5rem;
 }
 
+.project_container ul {
+    list-style: circle;
+    text-align: left;
+}
+
+
 .stack,
 .techTitle {
     font-weight: bold;
     font-size: 1.2rem;
 }
+
 
 .project_container:hover {
     background-color: #455073;
@@ -282,10 +289,9 @@ figcaption {
 .slider:before {
     position: absolute;
     content: "";
-    height: 20px;
-    width: 20px;
-    left: 2px;
-    top: 3px;
+    height: 26px;
+    width: 26px;
+    top: 1px;
     background-color: #4e74bf;
     transition: .4s;
     background-image: url(/images/uk_flag.svg);
@@ -341,9 +347,10 @@ input:checked+.slider:before {
     }
 
     .project_container {
-        display: flex;
-        flex-direction: column;
+        display: grid;
+        grid-template-rows: 5;
         align-items: center;
+        justify-items: center;
         max-width: 690px;
     }
 
@@ -401,8 +408,8 @@ input:checked+.slider:before {
         content: "";
         height: 26px;
         width: 26px;
-        left: 4px;
-        bottom: 4px;
+        left: -2px;
+        top: 2px;
         background-color: #4e74bf;
         transition: .4s;
         background-image: url('https://flagicons.lipis.dev/flags/4x3/gb.svg');
@@ -413,7 +420,7 @@ input:checked+.slider:before {
     }
 
     input:checked+.slider:before {
-        transform: translateX(26px);
+        transform: translateX(28px);
         content: "";
         background-image: url('https://flagicons.lipis.dev/flags/4x3/fr.svg');
     }
