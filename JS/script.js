@@ -156,7 +156,7 @@ const createProjectContainer = (project) => {
       li.id = 'github_link_fe';
       }
       else {
-        li.id = 'github_be_link_be';
+        li.id = 'github_link_be';
       }
     }
         const a = document.createElement('a');
@@ -189,7 +189,6 @@ const createProjectContainer = (project) => {
 
 
   // Append the details to the container
-  // container.appendChild(details);
 
   return container;
 };

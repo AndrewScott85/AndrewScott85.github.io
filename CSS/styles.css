@@ -7,7 +7,6 @@
 
 .container {
     max-width: 1400px;
-    margin: 0 auto;
 }
 
 
@@ -15,11 +14,10 @@ h1 {
     font-size: 1.5rem;
     text-align: center;
     text-decoration: none;
-    padding: 6rem 0rem 2rem 0rem;
-    margin-top: -4rem;
+    padding: 2rem 0rem 2rem 0rem;
     background-color: #4e74bf;
     color: #ffffff;
-    z-index: -2;
+    margin: 0;
 }
 
 h2 {
@@ -38,6 +36,7 @@ ul {
     position: sticky;
     top: 0;
     padding: 1rem 0 1rem 0;
+    border-bottom: 2px solid #4e74bf;
 }
 
 #navbar .active a {
@@ -71,17 +70,25 @@ a {
     color: #ffffff;
 }
 
-#main_image {
-    text-align: center;
+#home {
     position: sticky;
-    top: 6rem;
-    z-index: -1;
+    z-index: -2;
+    top: 4rem;
+    margin-bottom: 2rem;
+}
+
+#main_image {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 75vh;
 }
 
 #main_image img {
-    width: 80vw;
-    height: auto;
-    margin: 4rem 0 4rem 0;
+    max-width: 90vw;
+    max-height:80vh;
+    margin: 2rem;
 }
 
 
@@ -89,7 +96,6 @@ a {
     color: #ffffff;
     background-color: #455073;
     padding: 4rem 1rem 4rem 1rem;
-    margin-top: 4rem;
     text-align: center;
     font-size: 1.1rem;
 }
@@ -140,7 +146,8 @@ a {
     margin: 0.5rem;
 }
 
-.stack, .techTitle {
+.stack,
+.techTitle {
     font-weight: bold;
     font-size: 1.2rem;
 }
@@ -180,6 +187,7 @@ figcaption {
 }
 
 .project_links ul {
+    margin: 1rem 0 1rem 0;
     display: grid;
     grid-template-columns: 0.2fr 1fr 1fr 0.2fr;
     gap: 0.5rem;
@@ -206,7 +214,7 @@ figcaption {
 }
 
 .project_links a:hover {
-    padding: 3px;
+    padding: 5px;
     border: 1px solid #ffffff50;
     border-radius: 0.25rem;
 }
@@ -323,12 +331,7 @@ input:checked+.slider:before {
     h1 {
         font-size: 2rem;
     }
-    
-    #main_image img {
-    width: 50vw;
-    height: auto;
-    margin: 2rem;
-    }
+
     .portfolio_list {
         display: grid;
         grid-template-columns: 1fr 1fr;
@@ -345,26 +348,11 @@ input:checked+.slider:before {
     }
 
     .project_links ul {
-        display: grid;
-        grid-template-columns: 1fr 1fr 1fr;
-        gap: 0.5rem;
+        display: flex;
+        justify-content: center;
+        gap: 1.5rem;
         list-style: none;
         padding: 5px;
-    }
-
-    #github_link_fe {
-        grid-column: 1;
-        /* justify-self: start; */
-    }
-
-    #github_link_be {
-        grid-column: 2;
-        /* justify-self: start; */
-    }
-
-    .site_link {
-        grid-column: 3;
-        /* justify-self: start; */
     }
 
     .about_me p,
