@@ -1,5 +1,4 @@
 
-
 /*
 Switch language between English and French
 */
@@ -40,6 +39,9 @@ const updateContent = (langData) => {
       }
     });
   });
+
+  // Get text for 'tech_used' in project container
+  return langData.tech_used;
 }
 
 // Fetch language data
@@ -48,9 +50,11 @@ const fetchLanguageData = async (lang) => {
   return response.json();
 }
 
+let tech_used = '';
 // Change language
 async function changeLanguage(lang) {
   const langData = await fetchLanguageData(lang);
+  tech_used = langData.tech_used;
   updateContent(langData);
   updatePortfolio(langData.projects);
 }
@@ -127,7 +131,7 @@ const createProjectContainer = (project) => {
 
   const techTitle = document.createElement('p');
   techTitle.className = 'techTitle';
-  techTitle.textContent = 'Technologies Used';
+  techTitle.textContent = tech_used;
   container.append(techTitle);
 
   const techList = document.createElement('ul');

@@ -9,6 +9,7 @@
     "about_p2": "After earning my degree in mechanical engineering and working for several years in the energy efficiency sector, I took a career break to travel and teach scuba diving before focusing on my interest in tech. I'm a graduate of the 16 week full-stack coding bootcamp at <a href=\"https://io-academy.uk\">iO Academy</a> in Bath, UK and, after recently moving to Toulouse, am looking for career opportunities here.",
     "portfolio_title": "Portfolio",
     "portfolio_intro": "Below is a selection of projects showcasing some of the technologies I've worked with.",
+    "tech_used": "Built with:",
     "projects": [
         {
             "title": "Galère.AI",

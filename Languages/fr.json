@@ -9,6 +9,7 @@
   "about_p2": "Après avoir obtenu mon diplôme d'ingénieur en mécanique et travaillé pendant plusieurs années dans le secteur de l'efficacité énergétique, j'ai pris une pause pour voyager et enseigner la plongée sous-marine avant de me concentrer sur mon intérêt pour la technologie. Je suis diplômé du bootcamp de codage full-stack de 16 semaines à <a href=\"https://io-academy.uk\">iO Academy</a> à Bath, au Royaume-Uni, et après avoir récemment déménagé à Toulouse, je suis à la recherche d'opportunités professionnelles ici.",
   "portfolio_title": "Portfolio",
   "portfolio_intro": "Voici une sélection de projets présentant certaines des technologies avec lesquelles j'ai travaillé.",
+  "tech_used": "Construit avec:",
   "projects": [
     {
       "title": "Galère.AI",
