@@ -50,9 +50,10 @@ const fetchLanguageData = async (lang) => {
   return response.json();
 }
 
-let tech_used = '';
+
 // Change language
-async function changeLanguage(lang) {
+let tech_used = '';
+const changeLanguage = async (lang) => {
   const langData = await fetchLanguageData(lang);
   tech_used = langData.tech_used;
   updateContent(langData);
@@ -156,12 +157,8 @@ const createProjectContainer = (project) => {
     const li = document.createElement('li');
     li.className = 'github_link';
     if (isMultiGit) {
-      if (link === project.github[0]) {
-      li.id = 'github_link_fe';
-      }
-      else {
-        li.id = 'github_link_be';
-      }
+      li.id = link === project.github[0] ? 'github_link_fe' : 'github_link_be';
+
     }
         const a = document.createElement('a');
     a.href = link.url;
