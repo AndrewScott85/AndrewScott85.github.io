@@ -97,14 +97,7 @@ const updateActiveNavLink = () => {
   })
 }
 
-
-/*
-Populate Project Section
-*/
-const createProjectContainer = (project) => {
-  const container = document.createElement('div');
-  container.className = 'project_container';
-
+const createProjectFigure = (project) => {
   const figure = document.createElement('figure');
   figure.className = 'project_figure';
 
@@ -114,16 +107,41 @@ const createProjectContainer = (project) => {
   figure.appendChild(img);
 
   const figcaption = document.createElement('figcaption');
-  figcaption.textContent = project.title;
+  const titleSpan = document.createElement('span');
+  titleSpan.className = 'project_title'; // Add class for styling title
+  titleSpan.textContent = project.title;
+  const stackSpan = document.createElement('span');
+  stackSpan.className = 'project_stack'; // Add class for styling stack (full-stack, front-end etc)
+  stackSpan.textContent = `(${project.stack})`;
+  figcaption.appendChild(titleSpan);
+  figcaption.appendChild(stackSpan);
   figure.appendChild(figcaption);
 
+  return figure;
+}
+
+const createProjectSummary = (projectSummary) => {
+  const summary = document.createElement('p');
+  summary.className = 'summary';
+  summary.textContent = projectSummary;
+
+  return summary;
+}
+
+/*
+Populate Project Section
+*/
+const createProjectContainer = (project) => {
+  const container = document.createElement('div');
+  container.className = 'project_container';
+
+  // create project figure
+  const figure = createProjectFigure(project);
   container.appendChild(figure);
 
-
-  const stack = document.createElement('p');
-  stack.className = 'stack';
-  stack.textContent = project.stack;
-  container.appendChild(stack);
+  // create project summary
+  const summary = createProjectSummary(project.summary);
+  container.appendChild(summary);
 
   const description = document.createElement('p');
   description.className = 'projectDescription';
@@ -179,17 +197,12 @@ const createProjectContainer = (project) => {
   liveA.textContent = ' Live';
   const liveIcon = document.createElement('i');
   liveIcon.className = 'fa-solid fa-globe';
-  liveA.prepend(liveIcon); // Prepend the icon to the anchor text
+  liveA.prepend(liveIcon);
   liveLink.appendChild(liveA);
   ul.appendChild(liveLink);
 
   projectLinks.appendChild(ul);
   container.appendChild(projectLinks);
-
-
-
-
-  // Append the details to the container
 
   return container;
 };

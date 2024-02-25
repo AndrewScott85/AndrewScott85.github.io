@@ -60,7 +60,7 @@
         {
             "title": "CarPe-Diem",
             "stack": "Full-Stack",
-            "summary": "OOP PHP Car Collection App",
+            "summary": "Car Collection App",
             "description": "A PHP application showcasing car listings with search, filter, and detailed information functionalities. Built in an object oriented programming style.",
             "technologies": [
                 "PHP",

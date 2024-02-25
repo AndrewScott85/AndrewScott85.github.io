@@ -134,7 +134,7 @@ a {
     display: grid;
     grid-template-rows: 2fr 0.2fr 0.6fr 0.25fr 0.7fr 0.2fr;
     justify-items: center;
-    margin-bottom: 2rem;
+    margin-bottom: 1rem;
     border: 1px solid #ffffff50;
     border-radius: 0.1rem;
 }
@@ -149,8 +149,6 @@ a {
     text-align: left;
 }
 
-
-.stack,
 .techTitle {
     font-weight: bold;
     font-size: 1.2rem;
@@ -174,10 +172,20 @@ a {
 }
 
 figcaption {
-    font-size: 2rem;
-    color: #ffffff;
-    font-weight: bold;
+    font-size: 1.2rem;
     padding-top: 0.5rem;
+}
+
+.project_title {
+    font-size: 2rem;
+    font-weight: bold;
+    margin-right: 0.5rem;
+}
+
+.summary {
+    font-size: 1.2rem;
+    font-weight: bold;
+    margin: 0;
 }
 
 .project_links {
