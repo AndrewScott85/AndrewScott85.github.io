@@ -132,7 +132,7 @@ a {
 
 .project_container {
     display: grid;
-    grid-template-rows: 2fr 0.25fr 0.5fr 0.25fr 0.6fr;
+    grid-template-rows: 2fr 0.2fr 0.6fr 0.25fr 0.7fr 0.2fr;
     justify-items: center;
     margin-bottom: 2rem;
     border: 1px solid #ffffff50;
@@ -192,7 +192,7 @@ figcaption {
 }
 
 .project_links ul {
-    margin: 1rem 0 1rem 0;
+    margin-bottom:  1rem;
     display: grid;
     grid-template-columns: 0.2fr 1fr 1fr 0.2fr;
     gap: 0.5rem;
