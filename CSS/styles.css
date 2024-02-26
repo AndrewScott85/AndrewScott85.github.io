@@ -148,10 +148,6 @@ a {
     border-radius: 0.5rem;
 }
 
-.project-container:hover img {
-    border: 2px solid #ffffff;
-}
-
 .project-description {
     text-align: justify;
     padding: 0 1rem 0 1rem;
