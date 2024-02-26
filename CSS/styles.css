@@ -5,6 +5,10 @@
     font-family: 'Titillium Web', sans-serif;
 }
 
+html {
+    scroll-behavior: smooth;
+  }
+
 .container {
     max-width: 1400px;
 }
@@ -346,7 +350,9 @@ input:checked+.slider:before {
     h1 {
         font-size: 2rem;
     }
-
+#home {
+    height: 85vh;
+}
     .portfolio-list {
         display: grid;
         grid-template-columns: 1fr 1fr;

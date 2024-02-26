@@ -1,5 +1,5 @@
 {
-  "home": "<a href=\"#home\">Accueil</a>",
+  "home": "<a href=\"#top\">Accueil</a>",
   "about": "<a href=\"#about\">À propos</a>",
   "portfolio": "<a href=\"#portfolio\">Portfolio</a>",
   "contact": "<a href=\"#contact\">Contact</a>",
