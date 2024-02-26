@@ -40,7 +40,7 @@ const updateContent = (langData) => {
     });
   });
 
-  // Get text for 'tech_used' in project container
+  // Get text for 'tech-used' in project container
   return langData.tech_used;
 }
 
@@ -52,10 +52,10 @@ const fetchLanguageData = async (lang) => {
 
 
 // Change language
-let tech_used = '';
+let techUsed = '';
 const changeLanguage = async (lang) => {
   const langData = await fetchLanguageData(lang);
-  tech_used = langData.tech_used;
+  techUsed = langData.tech_used;
   updateContent(langData);
   updatePortfolio(langData.projects);
 }
@@ -66,6 +66,161 @@ const handleLangClick = () => {
   changeLanguage(lang);
   langSwitch.checked = lang !== 'en';
 }
+
+/*
+Helper Functions for createProjectContainer
+*/
+const createProjectFigure = ({ image, title, stack }) => {
+  const figure = document.createElement('figure');
+  figure.className = 'project-figure';
+
+  const img = document.createElement('img');
+  img.src = image;
+  img.alt = `${title} Project Image`;
+  figure.appendChild(img);
+
+  const figcaption = document.createElement('figcaption');
+  const titleSpan = document.createElement('span');
+  titleSpan.className = 'project-title'; // Add class for styling title
+  titleSpan.textContent = title;
+  const stackSpan = document.createElement('span');
+  stackSpan.className = 'project-stack'; // Add class for styling stack (full-stack, front-end etc)
+  stackSpan.textContent = `(${stack})`;
+  figcaption.appendChild(titleSpan);
+  figcaption.appendChild(stackSpan);
+  figure.appendChild(figcaption);
+  return figure;
+}
+
+const createProjectSummary = (summary) => {
+  const smmry = document.createElement('p');
+  smmry.className = 'summary';
+  smmry.textContent = summary;
+  return smmry;
+}
+
+const createProjectDescription = (description) => {
+  const dscrptn = document.createElement('p');
+  dscrptn.className = 'project-description';
+  dscrptn.textContent = description;
+  return dscrptn;
+}
+
+const createTechStack = (technologies) => {
+  const techStack = document.createElement('div');
+  techStack.className = 'tech-stack';
+  const techTitle = document.createElement('p');
+  techTitle.className = 'tech-title';
+  techTitle.textContent = techUsed;
+  techStack.appendChild(techTitle);
+
+  const techList = document.createElement('ul');
+  technologies.forEach(item => {
+    const techItem = document.createElement('li');
+    techItem.textContent = item;
+    techList.appendChild(techItem);
+  });
+  techStack.appendChild(techList);
+  return techStack;
+}
+
+const createProjectLinks = ({ github, liveUrl }) => {
+  const projectLinks = document.createElement('div');
+  projectLinks.className = 'project-links';
+
+  const ul = document.createElement('ul');
+
+  //create and format github links, including where separate front & back-end
+  github.forEach(link => {
+    const li = document.createElement('li');
+    li.className = 'github-link';
+    if (github.length > 1) {
+      li.id = link === github[0] ? 'github-link-fe' : 'github-link-be';
+    }
+    // Create anchor links for github 
+    const a = document.createElement('a');
+    a.href = link.url;
+    a.target = '_blank';
+    a.textContent = ' ' + link.text;
+    // Attach icon to link
+    const icon = document.createElement('i');
+    icon.className = 'fa-brands fa-github-square';
+    a.prepend(icon); // Prepend the icon to the anchor text
+    li.appendChild(a);
+    ul.appendChild(li);
+  });
+
+  // Create link to project site
+  const liveLink = document.createElement('li');
+  liveLink.className = 'site-link';
+  // Create anchor link for project sie 
+  const liveA = document.createElement('a');
+  liveA.href = liveUrl;
+  liveA.target = '_blank';
+  liveA.textContent = ' Live';
+  // Attach icon to link
+  const liveIcon = document.createElement('i');
+  liveIcon.className = 'fa-solid fa-globe';
+  liveA.prepend(liveIcon);
+  liveLink.appendChild(liveA);
+  ul.appendChild(liveLink);
+
+  projectLinks.appendChild(ul);
+
+  return projectLinks;
+}
+
+/*
+Populate Project Section
+*/
+const createProjectContainer = ({
+  title,
+  stack,
+  summary,
+  description,
+  technologies,
+  image,
+  github,
+  liveUrl,
+}) => {
+  const container = document.createElement('div');
+  container.className = 'project-container';
+
+  // create project figure
+  const figure = createProjectFigure({ image, title, stack });
+  container.appendChild(figure);
+
+  // create project summary
+  const smmry = createProjectSummary(summary);
+  container.appendChild(smmry);
+
+  // create project description
+  const dscrptn = createProjectDescription(description);
+  container.appendChild(dscrptn);
+
+  // create tech stack title & list
+  const techStack = createTechStack(technologies);
+  container.append(techStack);
+
+  // create project links section
+  const projectLinks = createProjectLinks({ github, liveUrl });
+  container.appendChild(projectLinks);
+
+  return container;
+};
+
+
+// Update the portfolio section with project details
+const updatePortfolio = (projects) => {
+  const portfolioList = document.querySelector('.portfolio-list');
+  portfolioList.textContent = ''; // Clear existing content safely
+
+  projects.forEach(project => {
+    const projectContainer = createProjectContainer(project);
+    portfolioList.appendChild(projectContainer);
+  });
+};
+
 /*
  Show current page section in Navbar
 */
@@ -86,7 +241,6 @@ const updateActiveNavLink = () => {
     else if (scrollY >= (sectionTop - (sectionHeight / 8))) {
       current = section.getAttribute('id');
     }
-
   })
 
   navList.forEach(item => {
@@ -96,129 +250,6 @@ const updateActiveNavLink = () => {
     }
   })
 }
-
-const createProjectFigure = (project) => {
-  const figure = document.createElement('figure');
-  figure.className = 'project_figure';
-
-  const img = document.createElement('img');
-  img.src = project.image;
-  img.alt = `${project.title} Project Image`;
-  figure.appendChild(img);
-
-  const figcaption = document.createElement('figcaption');
-  const titleSpan = document.createElement('span');
-  titleSpan.className = 'project_title'; // Add class for styling title
-  titleSpan.textContent = project.title;
-  const stackSpan = document.createElement('span');
-  stackSpan.className = 'project_stack'; // Add class for styling stack (full-stack, front-end etc)
-  stackSpan.textContent = `(${project.stack})`;
-  figcaption.appendChild(titleSpan);
-  figcaption.appendChild(stackSpan);
-  figure.appendChild(figcaption);
-
-  return figure;
-}
-
-const createProjectSummary = (projectSummary) => {
-  const summary = document.createElement('p');
-  summary.className = 'summary';
-  summary.textContent = projectSummary;
-
-  return summary;
-}
-
-/*
-Populate Project Section
-*/
-const createProjectContainer = (project) => {
-  const container = document.createElement('div');
-  container.className = 'project_container';
-
-  // create project figure
-  const figure = createProjectFigure(project);
-  container.appendChild(figure);
-
-  // create project summary
-  const summary = createProjectSummary(project.summary);
-  container.appendChild(summary);
-
-  const description = document.createElement('p');
-  description.className = 'projectDescription';
-  description.textContent = project.description;
-  container.appendChild(description);
-
-  const techTitle = document.createElement('p');
-  techTitle.className = 'techTitle';
-  techTitle.textContent = tech_used;
-  container.append(techTitle);
-
-  const techList = document.createElement('ul');
-  project.technologies.forEach(item => {
-    const techItem = document.createElement('li');
-    techItem.textContent = item;
-    techList.appendChild(techItem);
-  });
-  container.appendChild(techList);
-
-
-  const projectLinks = document.createElement('div');
-  projectLinks.className = 'project_links';
-
-  const ul = document.createElement('ul');
-
-  let isMultiGit = false;
-  if (project.github.length >1) {
-    isMultiGit = true;
-  }
-  project.github.forEach(link => {
-    const li = document.createElement('li');
-    li.className = 'github_link';
-    if (isMultiGit) {
-      li.id = link === project.github[0] ? 'github_link_fe' : 'github_link_be';
-
-    }
-        const a = document.createElement('a');
-    a.href = link.url;
-    a.target = '_blank';
-    a.textContent = ' ' + link.text;
-    const icon = document.createElement('i');
-    icon.className = 'fa-brands fa-github-square';
-    a.prepend(icon); // Prepend the icon to the anchor text
-    li.appendChild(a);
-    ul.appendChild(li);
-  });
-
-  const liveLink = document.createElement('li');
-  liveLink.className = 'site_link';
-  const liveA = document.createElement('a');
-  liveA.href = project.liveUrl;
-  liveA.target = '_blank';
-  liveA.textContent = ' Live';
-  const liveIcon = document.createElement('i');
-  liveIcon.className = 'fa-solid fa-globe';
-  liveA.prepend(liveIcon);
-  liveLink.appendChild(liveA);
-  ul.appendChild(liveLink);
-
-  projectLinks.appendChild(ul);
-  container.appendChild(projectLinks);
-
-  return container;
-};
-
-// Function to update the portfolio section with project details
-const updatePortfolio = (projects) => {
-  const portfolioList = document.querySelector('.portfolio_list');
-  portfolioList.textContent = ''; // Clear existing content safely
-
-  projects.forEach(project => {
-    const projectContainer = createProjectContainer(project);
-    portfolioList.appendChild(projectContainer);
-  });
-};
-
-
 
 
 // Listen for scroll events

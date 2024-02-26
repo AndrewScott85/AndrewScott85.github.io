@@ -14,7 +14,7 @@
     {
       "title": "Galère.AI",
       "stack": "Full-Stack",
-      "summary": "Application de partage d'images générées par l'IA",
+      "summary": "Partage les images générées par l'IA",
       "description": "Un site pour télécharger et partager de l'art généré par l'IA avec des descriptions. Les images sont compressées et stockées sur AWS. La prochaine version inclura la génération d'images et la description automatique via l'API Google Gemini.",
       "technologies": [
         "Laravel",
@@ -79,7 +79,7 @@
     {
       "title": "ScranMaster",
       "stack": "Front-End",
-      "summary": "Application front-end de livraison de nourriture",
+      "summary": "Application de livraison de nourriture",
       "description": "Front-end d'une application de livraison de nourriture React construit pour correspondre aux wireframes haute fidélité fournies. Fonctionnalités : liste des restaurants, filtrage, panier de commande et suivi de progression.",
       "technologies": [
         "React",

@@ -79,7 +79,7 @@
         {
             "title": "ScranMaster",
             "stack": "Front-End",
-            "summary": "Food Delivery App Front-End",
+            "summary": "Food Delivery App",
             "description": "A React food delivery app front-end built to match supplied high-fidelity wireframes. Features restaurant list, filtering, order basket, and progress tracking.",
             "technologies": [
                 "React",
