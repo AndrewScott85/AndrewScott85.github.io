@@ -7,10 +7,10 @@
 
 html {
     scroll-behavior: smooth;
-  }
+}
 
 .container {
-    max-width: 1400px;
+    max-width: 1200px;
 }
 
 
@@ -103,7 +103,7 @@ a {
 #about img {
     width: 20vw;
     height: auto;
-    border: 1px solid #f28f3860;
+    border: 1px solid #f28f3850;
     border-radius: 50%;
     max-width: 250px;
 }
@@ -334,7 +334,6 @@ input:checked+.slider:before {
 
 
     .container {
-        max-width: 1400px;
         margin: 0 auto;
     }
 
@@ -350,9 +349,11 @@ input:checked+.slider:before {
     h1 {
         font-size: 2rem;
     }
-#home {
-    height: 85vh;
-}
+
+    #home {
+        height: 85vh;
+    }
+
     .portfolio-list {
         display: grid;
         grid-template-columns: 1fr 1fr;
