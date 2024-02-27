@@ -1,0 +1,118 @@
+{
+  "home": "<a href=\"#top\">Accueil</a>",
+  "about": "<a href=\"#about\">À propos</a>",
+  "portfolio": "<a href=\"#portfolio\">Portfolio</a>",
+  "contact": "<a href=\"#contact\">Contact</a>",
+  "h1_tag": "Bonjour, je suis Andrew, développeur web full-stack.",
+  "about_title": "À propos de moi",
+  "about_p1": "Je suis un développeur de logiciels full-stack sociable et enthousiaste, passionné par la capacité du code à résoudre des problèmes et à permettre aux personnes d'en faire plus. Dans mon temps libre, j'aime la natation, la plongée, le sport, la cuisine et la lecture.",
+"about_p2": "Après avoir travaillé pendant plusieurs années dans le secteur de l'efficacité énergétique, j'ai fait une pause dans ma carrière pour voyager et enseigner la plongée sous-marine avant de me concentrer sur mon intérêt pour la technologie. Je suis diplômé du bootcamp de code full-stack de 16 semaines à <a href=\"https://io-academy.uk\">iO Academy</a>, et je possède également un diplôme d'ingénieur en mécanique. J'aime travailler sur toute la stack : de la construction d'API RESTful à la manipulation du CSS - si vous êtes intéressé par une collaboration, n'hésitez pas à me contacter !",
+  "portfolio_title": "Portfolio",
+  "portfolio_intro": "Voici une sélection de projets présentant certaines des technologies avec lesquelles j'ai travaillé.",
+  "tech_used": "Construit avec:",
+  "projects": [
+    {
+      "title": "Galère.AI",
+      "stack": "Full-Stack",
+      "summary": "Partage les images générées par l'IA",
+      "description": "Un site pour télécharger et partager de l'art généré par l'IA avec des descriptions. Les images sont compressées et stockées sur AWS. La prochaine version inclura la génération d'images et la description automatique via l'API Google Gemini.",
+      "technologies": [
+        "Laravel",
+        "Inertia",
+        "Jetstream",
+        "Vue",
+        "Tailwind CSS",
+        "AWS"
+      ],
+      "image": "images/galere.png",
+      "github": [
+        {
+          "text": "Github",
+          "url": "https://github.com/AndrewScott85/laravel-sail"
+        }
+      ],
+      "liveUrl": "http://galere.herokuapp.com/"
+    },
+    {
+      "title": "Tubular",
+      "stack": "Full-Stack",
+      "summary": "Planificateur d'itinéraire du métro londonien",
+      "description": "Un planificateur d'itinéraire en MERN pour le métro londonien. Trouve et affiche les itinéraires directs et les itinéraires nécessitant un changement de station, en fonction des stations de départ et d'arrivée. (Utilise des données fictives)",
+      "technologies": [
+        "MongoDB",
+        "Express",
+        "React",
+        "Node.js"
+      ],
+      "image": "images/tubular.png",
+      "github": [
+        {
+          "text": "Github FE",
+          "url": "https://github.com/AndrewScott85/london-underground-fe-continuation"
+        },
+        {
+          "text": "Github BE",
+          "url": "https://github.com/AndrewScott85/london-underground-be-continuation"
+        }
+      ],
+      "liveUrl": "http://galere.herokuapp.com/"
+    },
+    {
+      "title": "CarPe-Diem",
+      "stack": "Full-Stack",
+      "summary": "Application de collection de voitures",
+      "description": "Une application PHP présentant des listes de voitures avec des fonctionnalités de recherche, de filtrage et d'informations détaillées. Construit dans un style de programmation orientée objet.",
+      "technologies": [
+        "PHP",
+        "MySQL",
+        "SASS"
+      ],
+      "image": "images/carpediem.png",
+      "github": [
+        {
+          "text": "Github",
+          "url": "https://github.com/iO-Academy/2022-mar-carcollection"
+        }
+      ],
+      "liveUrl": "https://dev.io-academy.uk/projects/2022-march/2022-mar-carcollection/index.php"
+    },
+    {
+      "title": "ScranMaster",
+      "stack": "Front-End",
+      "summary": "Application de livraison de nourriture",
+      "description": "Front-end d'une application de livraison de nourriture React construit pour correspondre aux wireframes haute fidélité fournies. Fonctionnalités : liste des restaurants, filtrage, panier de commande et suivi de progression.",
+      "technologies": [
+        "React",
+        "Bootstrap"
+      ],
+      "image": "images/scranmaster.png",
+      "github": [
+        {
+          "text": "Github",
+          "url": "https://github.com/io-Academy/2022-mar-scranmaster"
+        }
+      ],
+      "liveUrl": "https://2022-mar-scranmaster.dev.io-academy.uk/"
+    },
+    {
+      "title": "WordRunner",
+      "stack": "Front-End",
+      "summary": "Jeu de devinettes de mots",
+      "description": "Un jeu de devinettes de mots aléatoires où une liste de synonymes est affichée et l'utilisateur doit deviner le mot cible avec un nombre limité de vies avant la fin du jeu.",
+      "technologies": [
+        "JavaScript",
+        "HTML",
+        "CSS"
+      ],
+      "image": "images/wordrunner.png",
+      "github": [
+        {
+          "text": "Github",
+          "url": "https://github.com/iO-Academy/2022-mar-word-finder"
+        }
+      ],
+      "liveUrl": "https://dev.io-academy.uk/projects/2022-march/wordrunner/"
+    }
+  ],
+  "vector_credit": "Vector artwork from <a href=\"https://www.vecteezy.com/free-vector/mobile-application-development\">Vecteezy</a>"
+}

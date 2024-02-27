@@ -1,0 +1,118 @@
+{
+    "home": "<a href=\"#top\">Home</a>",
+    "about": "<a href=\"#about\">About</a>",
+    "portfolio": "<a href=\"#portfolio\">Portfolio</a>",
+    "contact": "<a href=\"#contact\">Contact</a>",
+    "h1_tag": "Hi, I'm Andrew, a full-stack web developer.",
+    "about_title": "About Me",
+    "about_p1": "I am a friendly and enthusiastic full-stack software developer, passionate about the ability of coding to solve problems and enable people to do more. In my spare time, I like swimming, diving, keeping fit, cooking, and reading.",
+    "about_p2": "After working for several years in the energy efficiency sector, I took a career break to travel and teach scuba diving before focusing on my interest in tech. I'm a graduate of the 16 week full-stack coding bootcamp at <a href=\"https://io-academy.uk\">iO Academy</a>, and also have a degree in Mechanical Engineering. I enjoy working across the full stack, from building Restful APIs to tinkering with CSS - if you're interested in working together, please get in touch!",
+    "portfolio_title": "Portfolio",
+    "portfolio_intro": "Below is a selection of projects showcasing some of the technologies I've worked with.",
+    "tech_used": "Built with:",
+    "projects": [
+        {
+            "title": "Galère.AI",
+            "stack": "Full-Stack",
+            "summary": "AI-Generated Image Sharing App",
+            "description": "A site for uploading and sharing AI generated art with accompanying descriptions. Images are compressed and stored on AWS. The next iteration will include image generation and automatic description via Google Gemini API. ",
+            "technologies": [
+                "Laravel",
+                "Inertia",
+                "Jetstream",
+                "Vue",
+                "Tailwind CSS",
+                "AWS"
+            ],
+            "image": "images/galere.png",
+            "github": [
+                {
+                    "text": "Github",
+                    "url": "https://github.com/AndrewScott85/laravel-sail"
+                }
+            ],
+            "liveUrl": "http://galere.herokuapp.com/"
+        },
+        {
+            "title": "Tubular",
+            "stack": "Full-Stack",
+            "summary": "London Underground Route Planner",
+            "description": "A MERN stack route planner for the London Underground. Finds and displays both direct routes and routes requiring a change of station, based on start and end stations. (Uses mock data)",
+            "technologies": [
+                "MongoDB",
+                "Express",
+                "React",
+                "Node.js"
+            ],
+            "image": "images/tubular.png",
+            "github": [
+                {
+                    "text": "Github FE",
+                    "url": "https://github.com/AndrewScott85/london-underground-fe-continuation"
+                },
+                {
+                    "text": "Github BE",
+                    "url": "https://github.com/AndrewScott85/london-underground-be-continuation"
+                }
+            ],
+            "liveUrl": "http://galere.herokuapp.com/"
+        },
+        {
+            "title": "CarPe-Diem",
+            "stack": "Full-Stack",
+            "summary": "Car Collection App",
+            "description": "A PHP application showcasing car listings with search, filter, and detailed information functionalities. Built in an object oriented programming style.",
+            "technologies": [
+                "PHP",
+                "MySQL",
+                "SASS"
+            ],
+            "image": "images/carpediem.png",
+            "github": [
+                {
+                    "text": "Github",
+                    "url": "https://github.com/iO-Academy/2022-mar-carcollection"
+                }
+            ],
+            "liveUrl": "https://dev.io-academy.uk/projects/2022-march/2022-mar-carcollection/index.php"
+        },
+        {
+            "title": "ScranMaster",
+            "stack": "Front-End",
+            "summary": "Food Delivery App",
+            "description": "A React food delivery app front-end built to match supplied high-fidelity wireframes. Features restaurant list, filtering, order basket, and progress tracking.",
+            "technologies": [
+                "React",
+                "Bootstrap"
+            ],
+            "image": "images/scranmaster.png",
+            "github": [
+                {
+                    "text": "Github",
+                    "url": "https://github.com/io-Academy/2022-mar-scranmaster"
+                }
+            ],
+            "liveUrl": "https://2022-mar-scranmaster.dev.io-academy.uk/"
+        },
+        {
+            "title": "WordRunner",
+            "stack": "Front-End",
+            "summary": "Word Guessing Game",
+            "description": "A randomised word-guessing game where a list of synonyms are displayed and the user must guess the target word with a limited number of lives before it's game over.",
+            "technologies": [
+                "JavaScript",
+                "HTML",
+                "CSS"
+            ],
+            "image": "images/wordrunner.png",
+            "github": [
+                {
+                    "text": "Github",
+                    "url": "https://github.com/iO-Academy/2022-mar-word-finder"
+                }
+            ],
+            "liveUrl": "https://dev.io-academy.uk/projects/2022-march/wordrunner/"
+        }
+    ],
+    "vector_credit": "Vector artwork from <a href=\"https://www.vecteezy.com/free-vector/mobile-application-development\">Vecteezy</a>"
+}
