@@ -15,7 +15,7 @@
             "title": "Galère.AI",
             "stack": "Full-Stack",
             "summary": "AI-Generated Image Sharing App",
-            "description": "A site for uploading and sharing AI generated art with accompanying descriptions. Images are compressed and stored on AWS. The next iteration will include image generation and automatic description via Google Gemini API. ",
+            "description": "A site for uploading and sharing AI generated art with accompanying descriptions. Images are compressed and stored on AWS. The next iteration will include image generation and automatic description via API. ",
             "technologies": [
                 "Laravel",
                 "Inertia",

@@ -15,7 +15,7 @@
       "title": "Galère.AI",
       "stack": "Full-Stack",
       "summary": "Partage les images générées par l'IA",
-      "description": "Un site pour télécharger et partager de l'art généré par l'IA avec des descriptions. Les images sont compressées et stockées sur AWS. La prochaine version inclura la génération d'images et la description automatique via l'API Google Gemini.",
+      "description": "Un site pour télécharger et partager de l'art généré par l'IA avec des descriptions. Les images sont compressées et stockées sur AWS. La prochaine version inclura la génération d'images et la description automatique via API.",
       "technologies": [
         "Laravel",
         "Inertia",
