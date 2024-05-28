@@ -14,8 +14,8 @@
     {
       "title": "Galère.AI",
       "stack": "Full-Stack",
-      "summary": "Partage les images générées par l'IA",
-      "description": "Un site pour télécharger et partager de l'art généré par l'IA avec des descriptions. Les images sont compressées et stockées sur AWS. La prochaine version inclura la génération d'images et la description automatique via API.",
+      "summary": "Application pour créer et partager des publications générées par l'IA",
+      "description": "Un site pour créer/télécharger et partager des publications générées par l'IA, comprenant un titre, une image et un texte. Les images sont compressées et stockées sur AWS. La prochaine itération permettra aux utilisateurs d'aimer et de commenter les publications, ainsi que de modifier les images et les textes via une API.",
       "technologies": [
         "Laravel",
         "Inertia",
@@ -31,7 +31,7 @@
           "url": "https://github.com/AndrewScott85/laravel-sail"
         }
       ],
-      "liveUrl": "http://galere.herokuapp.com/"
+      "liveUrl": "https://galere.fly.dev"
     },
     {
       "title": "Tubular",
