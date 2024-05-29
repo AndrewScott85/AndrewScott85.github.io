@@ -14,7 +14,7 @@
     {
       "title": "Galère.AI",
       "stack": "Full-Stack",
-      "summary": "Application pour créer et partager des publications générées par l'IA",
+      "summary": "Créer et partager des publications générées par l'IA",
       "description": "Un site pour créer/télécharger et partager des publications générées par l'IA, comprenant un titre, une image et un texte. Les images sont compressées et stockées sur AWS. La prochaine itération permettra aux utilisateurs d'aimer et de commenter les publications, ainsi que de modifier les images et les textes via une API.",
       "technologies": [
         "Laravel",
@@ -24,7 +24,7 @@
         "Tailwind CSS",
         "AWS"
       ],
-      "image": "images/galere.png",
+      "image": "images/galere_ai.png",
       "github": [
         {
           "text": "Github",
